@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0">
+		<meta name="apple-itunes-app" content="app-id=912530754">
+		<meta name="description" content="Become a happier, healthier you! Using methods backed by years of research, get fitter, eat healthier, sleep better, and stress less in a way that is actually enjoyable.">
+	    <title>Lark</title>
+	    <script src='./js/jquery-min.js'></script>
+		<script src='./js/cloud.js'></script>
+	
+	    <script type="text/javascript">
+			$.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+			
+			var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+			if (isiPhone) {
+				window.location.replace("redirect.html");
+			}
+		</script>
+		<link href="./css/standardize.css" rel="stylesheet" type="text/css" />
+		<link href="./css/menu.css" rel="stylesheet" type="text/css" />
+		<link href="./css/other.css" rel="stylesheet" type="text/css" />
+		<link href="./css/styles.css" rel="stylesheet" type="text/css" />
+		<link href="./css/onepage-scroll.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			#nav-toggle span,
+			#nav-toggle span:before,
+			#nav-toggle span:after {
+				background: #FFFFFF !important;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-52622603-1', 'auto');
+			ga('send', 'pageview');
+			
+		</script>
+		<!-- mobile header -->
+		<ul id="menu">
+			<li><a href="./products/lark-for-iphone">Lark for iPhone</a></li>
+			<li><a href="./team/health-committee">Lark Health Committee</a></li>
+			<!--<li class="no-display"><a href="./team/management-team">Management Team</a></li>-->
+			<!--<li class="no-display"><a href="./team/careers">Careers</a></li>-->
+			<!--<li class="no-display"><a href="./products/lark-activity-tracker">lark activity tracker</a></li>-->
+			<li><a href="./about/press">Press</a></li>
+			<!--<li class="no-display"><a href="http://blog.lark.com">Blog</a></li>-->
+			<li><a class="social twitter" href="https://www.twitter.com/ourlark" target="_blank"><span class="twitter-text">Follow us</span></a></li>
+			<li><a class="social facebook" href="https://www.facebook.com/ourLARK" target="_blank"><span class="facebook-text">Like us</span></a></li>
+			<li><a href="http://support.lark.com/home">Support</a></li>
+		</ul>
+		<header id="nav-header">
+			<div id="nav-toggle" href="#"><span></span></div>
+		</header>
+		<!-- end mobile header -->
+		<div id="page" class="main">
+			<div class="header center homepage">
+				<a class="logo-white" href="#"></a>
+				<div class="nav">
+					<ul>
+						<li><a href="#">About</a>
+							<ul>
+								<!--<li class="no-display"><a href="http://blog.lark.com">Blog</a></li>-->
+								<li><a href="./about/press">Press</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Team</a>
+							<ul>
+								<li><a href="./team/health-committee">Lark Health Committee</a></li>
+								<!--<li class="no-display"><a href="./team/management-team">Management Team</a></li>-->
+								<!--<li class="no-display"><a href="./team/careers">Careers</a></li>-->
+							</ul>
+						<li><a href="#">Products</a>
+							<ul>
+								<li><a href="./products/lark-for-iphone">Lark for iPhone</a></li>
+								<!--<li class="no-display"><a href="./products/lark-activity-tracker">lark activity tracker</a></li>-->
+							</ul>
+						</li>
+						<li><a href="http://support.lark.com/home">Support</a></li>
+						<li><a class="social twitter" href="https://www.twitter.com/ourlark" target="_blank"><span class="twitter-text">Follow us</span></a></li>
+						<li><a class="social facebook" href="https://www.facebook.com/ourLARK" target="_blank"><span class="facebook-text">Like us</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end desktop header -->
+			
+			<section class="page1">
+				<div class="outer">
+					<div class="middle">
+						<div class="inner">
+							<div id="container-1" class="hidden">
+								<div class="image-2"></div>
+								<p class="prompt">Hi there. It looks like you'd like to get healthier and happier. That right?<span id="blinking-cursor"></span></p>
+								
+								<div id="container-button-1" class="container-buttons">
+									<input id="button-1" type="submit" value="Yeah" class="flat-button first-button">
+									<input id="button-2" type="submit" value="Not sure" class="flat-button">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<canvas id="tutorial"></canvas>
+			
+			<section class="page2">
+				<div class="outer">
+					<div class="middle">
+						<div class="inner">
+							<div id="container-2a" class="hidden">
+								<div class="image-2"></div>
+								<p class="prompt"></p>
+								
+								<div id="container-button-2a" class="container-buttons">
+									<input id="button-3" type="submit" value="Sure" class="flat-button first-button">
+									<input id="button-4" type="submit" value="Tell me more" class="flat-button">
+								</div>
+							</div>
+							
+							<div id="container-2b" class="hidden">
+								<div class="image-2"></div>
+								<p class="prompt"></p>
+								
+								<div id="container-button-2b" class="container-buttons">
+									<input id="button-5" type="submit" value="I'm listening" class="flat-button first-button">
+									<input id="button-6" type="submit" value="Not buyin' it" class="flat-button">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="page3">
+				<div class="outer">
+					<div class="middle">
+						<div class="inner">
+							<div id="container-3" class="hidden">
+								<div class="image-2 image-2-a"></div>
+								<p class="prompt prompt-a"></p>
+								<div class="image-2"></div>
+								<p id="prompt-b" class="prompt"></p>
+								
+								<div id="container-button-3" class="container-buttons">
+									<form action="./appleEmail.php">
+										<input class="_input" placeholder="Email" name="email" type="email">
+										<input id="button-7" type="submit" value="Go!" class="flat-button first-button">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="page4">
+				<div class="outer">
+					<div class="middle">
+						<div class="inner">
+							<div id="container-4" class="hidden">
+								<div class="image-2"></div>
+								<p id="prompt-4" class="prompt">See you on your phone!</p>
+							</div>
+						</div>
+					</div>
+			    </div>
+			</section>
+		</div>
+		<footer id="index-footer" class="page-row">
+			<ul style="text-align:center; "id="badges" class="opacity">
+				<li class="appstore-li"><a href="https://itunes.apple.com/us/app/id912530754" target="itunes_store"></a></li>
+				<!--<li class="samsung-li"><a href="http://apps.samsung.com/mars/topApps/topAppsDetail.as?productId=000000848760"><img src="./images/samsung-appstore-badge.png"></a></li>-->
+			</ul>
+		</footer>
+		<script src='./js/main.js'></script>
+		<script src='./js/jquery.onepage-scroll.js'></script>
+		<script src="./js/blinking-cursor.js"></script>
+		<script src="./js/menu.js"></script>
+		<script>
+			document.querySelector( "#nav-toggle" ).addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		</script>
+	</body>
+</html>

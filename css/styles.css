@@ -1,0 +1,287 @@
+body {
+	font-family: 'akkurat-light',Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	line-height: 1.15;
+}
+
+.main section {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.main {
+	/*background: red !important;*/
+}
+
+.page1 {
+	background-image: url('../images/bg-1.jpg');
+}
+
+.page2 {
+	background-image: url('../images/bg-2.jpg');
+}
+
+.page3 {
+	background-image: url('../images/bg-3.jpg');
+}
+
+.page4 {
+	background-image: url('../images/bg-4.jpg');
+}
+
+.onepage-wrapper .section {
+	width: 100%;
+	height: 100%;
+}
+
+.image-2 {
+	background-image: url('../images/lark_avatar.png');
+	background-size: cover;
+	display: inline-block;
+	vertical-align: top;
+	height: auto;
+	overflow: hidden;
+	z-index: 20;
+	width: 64px;
+	height: 64px;
+	margin: auto 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto; 
+	width: 75%;
+}
+
+.prompt {
+	width: 85%;
+	margin-left: 5%;
+	color: #FFF;
+	font-size: 2.7em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#prompt-4 {
+	width: auto;
+}
+
+.prompt-a,
+.image-2-a {
+	margin-bottom: 5%;
+}
+
+#container-1 {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10%;
+}
+
+#container-2a {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10%;
+}
+
+#container-2b {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10%;
+}
+
+#container-3 {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10%;
+}
+
+#container-4 {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -8%;
+	text-align: center;
+}
+
+.container-buttons {
+	width: 75%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#container-button-2a {
+	position: relative;
+}
+
+#container-button-2b {
+	position: relative;
+}
+
+.first-button {
+	margin-right: 15%;
+}
+
+.flat-button {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 35%;
+	height: 60px;
+	padding: 0;
+	font-family: 'akkurat-bold';
+	font-size: 1.5em;
+	color: #FF820B;
+	text-align: center;
+	background: #FFF;
+	border: 0;
+	cursor: pointer;
+	transform: translateZ(0px);
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+
+.flat-button:active {
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.flat-button:hover, .flat-button:focus, .flat-button:active {
+	transform: scale(1.1);
+}
+
+.flat-button:hover:before, .flat-button:focus:before, .flat-button:active:before {
+	opacity: 1;
+	transform: translateY(5px);
+}
+
+._input {
+	background-color: transparent;
+	display: inline-block;
+	position: relative;
+	width: 45%;
+	height: 60px;
+	padding: 0;
+	font-family: 'akkurat-bold';
+	font-size: 1.5em;
+	margin: 0px auto;
+	padding: 0px 10px;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	line-height: 1.38;
+	color: #FFFFFF;
+}
+
+#button-7 {
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	line-height: 1.38;
+	background-color: transparent;
+	width: 60px;
+	padding: 5px;
+	margin-left: 2%;
+}
+
+.menu-btn span {
+	display: block;
+	width: 19px;
+	height: 3px;
+	margin: 4px 0;
+	background: rgb(0,0,0);
+	z-index: 99;
+}
+
+.opacity {
+	opacity: 0.2;
+}
+
+#index-footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: auto;
+	z-index: 700;
+}
+
+@media(max-width: 1400px) {
+    .prompt {
+        font-size: 2.2em;
+    }
+
+    .flat-button, ._input  {
+        font-size: 1em;
+    }
+    #container-4 {
+        width: 75%;
+    }
+    #container-4 .image-2 {
+        margin-left: 15%;
+    }
+}
+
+@media(max-width: 1200px) {
+	.inner {
+		width: 90%;
+	}
+	
+	.flat-button {
+		/*height: 50px;*/
+	}
+}
+
+@media(max-width: 1000px) {
+	#container-1,
+	#container-2a,
+	#container-2b,
+	#container-3,
+	#container-4 {
+		width: 95%;
+	}
+	
+	.prompt {
+		font-size: 1.5em;
+	}
+	
+	.flat-button,
+	._input {
+		font-size: 1em;
+	}
+	
+	#container-4 .image-2 {
+		margin-left: 15%;
+	}
+	#container-4 .prompt {
+		width: 40%;
+		margin-left: 1%;
+	}
+}
+
+@media(max-width: 790px) {
+	.prompt {
+		width: 75%;
+	}
+}

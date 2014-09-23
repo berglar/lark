@@ -1,0 +1,737 @@
+/* global */
+
+@font-face { font-family: 'akkurat-light';src: url(../fonts/AkkuratStd-Light.eot);src: url(../fonts/AkkuratStd-Light.eot?#iefix) format('embedded-opentype'),url(../fonts/AkkuratStd-Light.woff) format('woff'),url(../fonts/AkkuratStd-Light.ttf) format('truetype'),url(../fonts/AkkuratStd-Light.svg#quartzregular) format('svg');font-weight: 400;font-style: normal; }
+
+@font-face { font-family:'akkurat-bold';src:url(../fonts/AkkuratStd-Bold.eot);src:url(../fonts/AkkuratStd-Bold.eot?#iefix) format('embedded-opentype'),url(../fonts/AkkuratStd-Bold.ttf) format('truetype'),url(../fonts/AkkuratStd-Bold.svg#quartzregular) format('svg');font-weight:700;font-style:normal; }
+
+@font-face { font-family:'akkurat-regular';src:url(../fonts/AkkuratStd-Regular.eot);src:url(../fonts/AkkuratStd-Regular.eot?#iefix) format('embedded-opentype'),url(../fonts/AkkuratStd-Regular.woff) format('woff'),url(../fonts/AkkuratStd-Regular.ttf) format('truetype'),url(../fonts/AkkuratStd-Regular.svg#quartzregular) format('svg');font-weight:400;font-style:normal; }
+
+@font-face { font-family:'akkurat-italic';src:url(../fonts/AkkuratStd-Italic.eot);src:url(../fonts/AkkuratStd-Italic.eot?#iefix) format('embedded-opentype'),url(../fonts/AkkuratStd-Italic.woff) format('woff'),url(../fonts/AkkuratStd-Italic.ttf) format('truetype'),url(../fonts/AkkuratStd-Italic.svg#quartzregular) format('svg');font-weight:400;font-style:normal; }
+
+html {
+	font-family: "akkurat-regular";
+	color: #909090;
+}
+
+body {
+	font-family: "akkurat-regular";
+	color: #909090;
+	background: #333333;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "akkurat-bold";
+	color: #000000;
+}
+
+p {
+	font-family: "akkurat-regular";
+}
+
+body em {
+	font-family: "akkurat-italic";
+}
+
+body strong {
+	font-family: "akkurat-bold";
+}
+
+.maxwidth {
+	max-width: 1024px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.text-center {
+	align-text: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.no-display {
+	display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+	.sm {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.xs {
+		display: none !important;
+	}
+}
+
+#main {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+#page {
+	display: block;
+	position: relative; /* Set the position property so z-index will apply */
+	z-index: 40; /* Make sure this is higher than #menu */
+}
+
+.other-page {
+	background: #FFFFFF;
+}
+
+.container,
+.container-fluid {
+	background: transparent;
+}
+
+
+
+/* Header */
+
+
+.header {
+	height: 60px;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 7px;
+	font-size: 14px;
+}
+
+/* Large Screens */
+
+@media screen and (min-width: 636px) {
+	.logo {
+		background-image: url('../images/logo.png');
+		background-size: cover;
+		width: 100px;
+		height: 45px;
+		display: inline-block;
+		float: left;
+	}
+	
+	.logo-white {
+		background-image: url('../images/Lark-logo.png');
+		background-size: cover;
+		width: 78px;
+		height: 36px;
+		display: inline-block;
+		float: left;
+	}
+	
+	.nav {
+		display: inline-block;
+		float: right;
+		height: 45px;
+		padding-top: 7px;
+	}
+	
+	.mobile-nav {
+		display: none;
+	}
+	
+	.nav ul ul {
+		display: none;
+	}
+	
+	.nav ul li:hover > ul {
+		display: block;
+	}
+	
+	.nav ul {
+		padding: 0px;
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		text-align: left;
+		index: 999;
+	}
+	
+	.nav ul li {
+		float: left;
+		
+	}
+	
+	.nav ul li a {
+		padding: 5px 20px;
+		display: block;
+		color: #636564;
+		text-decoration: none;
+	}
+	
+	/* index */
+	.homepage .nav ul li a {
+		padding: 5px 20px;
+		display: block;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	
+	.nav ul li:hover {
+		
+	}
+	
+	.nav ul li:hover a {
+		color: #636564;
+		text-decoration: none;
+	}
+	
+	/* index */
+	.homepage .nav ul li:hover a {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	
+	.nav ul li a:hover {
+		color: #EC742A;
+	}
+	
+	.homepage .nav ul li a:hover {
+		color: #EC742A;
+	}
+	
+	.nav ul li:hover > ul {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.nav ul li:hover > ul li {
+		float: none;
+		display: block;
+	}
+	
+	.nav ul li:hover > ul li a {
+		min-width: 300px;
+		color: #636564;
+		text-decoration: none;
+	}
+	
+	/* index */
+	.homepage .nav ul li:hover > ul li a {
+		min-width: 300px;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	
+	.nav ul li:hover > ul li a:hover {
+		color: #EC742A;
+	}
+	
+	.nav ul li {
+		position: relative;
+	}
+	
+	.nav ul li ul {
+		position: absolute;
+		top: 26px;
+		left: 0px;
+	}
+	
+	.social {
+		margin-top: -7px;
+		width: 45px;
+		height: 45px;
+	}
+	
+	.twitter {
+		background-image: url('../images/twitter.png');
+		background-size: cover;
+		margin-right: 10px;
+	}
+	
+	.twitter-text {
+		display: none !important;
+	}
+	
+	.facebook {
+		background-image: url('../images/fb.png');
+		background-size: cover;
+	}
+	
+	.facebook-text {
+		display: none !important;
+	}
+	
+	.jumbotron h1 {
+		padding: 60px 0px 30px 0px;
+		text-align: center;
+		color: #EC742A;
+		font-family: "akkurat-light";
+	}
+	
+	.mobile-phone {
+		display: none !important;
+	}
+	
+	#nav-toggle {
+		display: none !important;
+	}
+	
+	#nav-toggle span,
+	#nav-toggle span:before,
+	#nav-toggle span:after {
+		display: none !important;
+	}
+	#nav-toggle span:before {
+		display: none !important;
+	}
+	#nav-toggle span:after {
+		display: none !important;
+	}
+	
+	#nav-toggle span,
+	#nav-toggle span:before,
+	#nav-toggle span:after {
+		display: none !important;
+	}
+}
+
+/* Small Screens */
+	
+@media screen and (max-width: 635px) {
+	.logo {
+		background-image: url('../images/logo.png');
+		background-size: cover;
+		width: 100px;
+		height: 45px;
+		display: block;
+		margin: 0 auto;
+		z-index: 800;
+	}
+	
+	.logo-white {
+		background-image: url('../images/Lark-logo.png');
+		background-size: cover;
+		width: 78px;
+		height: 36px;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.nav {
+		display: none !important;
+	}
+	
+	.twitter {
+		background-image: none;
+	}
+	
+	.twitter-text {
+		
+	}
+	
+	.facebook {
+		background-image: none;
+	}
+	
+	.facebook-text {
+		
+	}
+	
+	.jumbotron h1 {
+		padding: 30px 0px 0px 0px;
+		text-align: center;
+		color: #EC742A;
+		font-family: "akkurat-light";
+	}
+	
+	.appstore {
+		padding: 30px 0px 10px 0px;
+	}
+	
+	.iphone-center video {
+		display: none;
+	}
+	
+	.mobile-phone {
+		background-image: url('../images/get_fitter.png');
+		background-size: cover;
+		width: 300px;
+		height: 576px;
+	}
+	
+	#nav-toggle {
+		cursor: pointer;
+		padding: 30px 60px 30px 20px;
+		z-index: 999;
+	}
+	
+	#nav-toggle span,
+	#nav-toggle span:before,
+	#nav-toggle span:after {
+		cursor: pointer;
+		border-radius: 1px;
+		height: 5px;
+		width: 35px;
+		background: #EC742A;
+		position: absolute;
+		display: block;
+		content: '';
+	}
+	#nav-toggle span:before {
+		top: -10px;
+	}
+	#nav-toggle span:after {
+		bottom: -10px;
+	}
+	
+	#nav-toggle span,
+	#nav-toggle span:before,
+	#nav-toggle span:after {
+		transition: all 500ms ease-in-out;
+	}
+}
+
+
+
+/* Footer */
+
+#footer {
+	background-color: #EC742A;
+	height: 60px;
+}
+
+.footer-style {
+	height: 60px;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 22px;
+	font-size: 14px;
+}
+
+
+
+/* Lark Health Committee */
+
+.description-row {
+	padding: 30px 0px 0px 0px;
+}
+
+.description {
+	border-bottom: 1px solid #D9D9D9;
+	padding-bottom: 30px;
+}
+
+.description h1 {
+	
+}
+
+.description p {
+	padding: 0px;
+	margin: 0px;
+	color: #626262;
+}
+
+.members {
+	padding: 30px 0px 15px 0px;
+}
+
+.member-image {
+	text-align: center;
+}
+
+.member-description {
+	text-align: left;
+	margin: 0 auto;
+	max-width: 260px;
+	color: #000000;
+}
+
+.member-name {
+	color: #EC742A;
+	font-size: 14px;
+	font-style: bold;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+.member-title {
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.member-bio {
+	color: #D9D9D9;
+	font-size: 12px;
+	padding-bottom: 20px;
+	padding-bottom: 20px;
+	color: #626262;
+}
+
+
+
+/* Lark for iPhone */
+
+.jumbotron {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.gradient-background {
+	background-image: radial-gradient(circle at top right, #C9F8FD, #FFFFFF 60%);
+}
+
+.float_center {
+	float: right;
+	position: relative;
+	left: -50%;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.float_center > .child {
+	position: relative;
+	left: 50%;
+}
+
+.float_center ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.float_center ul li {
+  float: left;
+  list-style-type: none;
+  margin: 0 6px;
+}
+
+.iphone {
+	
+}
+
+.iphone-left {
+	background-image: url('../images/sleep_better.png');
+	background-size: cover;
+	width: 250px;
+	height: 480px;
+	position: relative;
+	top: 50px;
+}
+
+.iphone-center {
+	background-image: url('../images/empty_iphone.png');
+	background-size: cover;
+	width: 300px;
+	height: 576px;
+}
+
+.iphone-right {
+	background-image: url('../images/get_fitter.png');
+	background-size: cover;
+	width: 250px;
+	height: 480px;
+	position: relative;
+	top: 50px;
+}
+
+.features {
+	border-top: 1px solid #D9D9D9;
+	padding-bottom: 30px;
+}
+
+.features h2 {
+	color: #EC742A;
+}
+
+.features h3 {
+	
+}
+
+.features p {
+	margin-bottom: 10px;
+}
+
+.attribution p {
+	font-size: 10px;
+	padding-top: 30px;
+}
+
+
+
+/* Lark Press */
+
+.press-row {
+	padding: 30px 0px 0px 0px;
+}
+
+.press {
+	border-bottom: 1px solid #D9D9D9;
+	padding-bottom: 30px;
+}
+
+.presses {
+	padding: 60px 0px 15px 0px;
+}
+
+.press-image {
+	text-align: center;
+}
+
+.press-image a {
+	text-decoration: none;
+}
+
+.press-description {
+	text-align: left;
+	margin: 0 auto;
+	padding-top: 10px;
+	max-width: 260px;
+	color: #000000;
+}
+
+.quote {
+	font-family: "akkurat-bold";
+}
+
+.no-quote {
+	display: none !important;
+}
+
+.link {
+	color: #EC742A;
+}
+
+.press-kit,
+.press-kit:link {
+	font-family: "akkurat-bold";
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #EC742A;
+	padding: 15px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.press-kit:hover,
+.press-kit:visited,
+.press-kit:active {
+	font-family: "akkurat-bold";
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #FFBF00;
+	padding: 15px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 4px #D9D9D9;
+	display: inline-block;
+}
+
+.presses-kit {
+	padding: 30px 0px 200px 0px;
+}
+
+.presses-kit p {
+	padding-top: 20px;
+}
+
+
+
+
+/* iPhone Redirect */
+
+.page {
+	background-image: url('../images/bg-4.jpg') !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative; /* Set the position property so z-index will apply */
+	z-index: 20; /* Make sure this is higher than #menu */
+	height: 100%;
+}
+
+.redirect-header {
+	width: 100%;
+	padding-top: 12px;
+	display: block;
+}
+
+.redirect-header a {
+	width: 78px;
+	height: 36px;
+	background-image: url('../images/Lark-logo.png');
+	repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	display: block;
+	text-decoration: none;
+}
+
+.redirect-table {
+	display: table;
+	width: 100%;
+	height: 80%;
+}
+
+.redirect-row {
+	display: table-row;
+	text-align: center;
+}
+
+.redirect-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.icon-cell {
+	padding-bottom: 10%;
+	vertical-align: bottom;
+}
+
+.phrase-cell {
+	height: 15%;
+}
+
+.appstore-cell {
+	vertical-align: top;
+}
+
+.redirect-icon {
+	background-image: url('../images/lark_avatar.png');
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+
+.redirect-phrase {
+	color: #FFFFFF;
+	font-size: 1.5em;
+	display: inline-block;
+}
+
+.appstore-cell a,
+.appstore-li a {
+	display: inline-block;
+	overflow: hidden;
+	background: url('https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png') no-repeat;
+	width: 135px;
+	height: 40px;
+}
+
+
+
+/* Index */
+
+.appstore-li {
+	margin: 0px 0px 80px 0px;
+}
+
+.samsung-li {
+	margin: 0px 0px 80px 0px;
+}
+
+.homepage {
+	padding: 10px 20px;
+	position: relative;
+	z-index: 900;
+}
