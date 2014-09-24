@@ -7,10 +7,10 @@ $(document).ready(function(){
         $(".main").onepage_scroll({
             sectionContainer: "section",
             easing: "ease-out",
-            pagination: false,   
+            pagination: false,
             responsiveFallback: false,
             loop: false
-        });	
+        });
     }
 
 	var func_1 = function() {
@@ -40,11 +40,11 @@ $(document).ready(function(){
 
 	var func_6 = function() {
 		$("#container-2a").hide();
-    	$("#container-2b").hide();					
+    	$("#container-2b").hide();
 	};
 
     var func_7 = function() {
-    	$("#container-2b .prompt").html("No worries. Studies have shown that the only way to get healthier in the long term is to do what makes you happy. Lark actually makes getting healthier really enjoyable.");	
+    	$("#container-2b .prompt").html("No worries. Studies have shown that the only way to get healthier in the long term is to do what makes you happy. Lark actually makes getting healthier really enjoyable.");
     };
 
 	var func_8 = function() {
@@ -69,7 +69,7 @@ $(document).ready(function(){
 	var func_12 = function() {
         setTimeout(function(){
              $("#container-3").fadeIn(2000);
-        }, 300);	    	
+        }, 300);
     };
 
     var func_13 = function() {
@@ -113,11 +113,11 @@ $(document).ready(function(){
 	var func_20 = function() {
         setTimeout(function(){
              $("#container-4").fadeIn(2000);
-        }, 300);	    	
+        }, 300);
     };
 
 	var func_21 = function() {
-        $("#container-3").addClass('opacity');	    	
+        $("#container-3").addClass('opacity');
     };
 
 	var func_22 = function() {
@@ -136,7 +136,7 @@ $(document).ready(function(){
         $('.responsive-menu').toggleClass('expand');
     });
 
-	call_scroll();            
+	call_scroll();
 
     $("#container-1").fadeIn(2000);
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="apple-itunes-app" content="app-id=912530754">
+		<meta name="description" content="Become a happier, healthier you! Using methods backed by years of research, get fitter, eat healthier, sleep better, and stress less in a way that is actually enjoyable.">
+		<title>Lark</title>
+		
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="./css/menu.css" rel="stylesheet" type="text/css" />
+		<link href="./css/other.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			html, body {
+				height: 100% !important;
+				background: #333333 !important;
+				font-family: 'akkurat-light' !important;
+				line-height: 1.15 !important;
+			}
+			
+			#nav-toggle span,
+			#nav-toggle span:before,
+			#nav-toggle span:after {
+				cursor: pointer !important;
+				border-radius: 1px !important;
+				height: 5px !important;
+				width: 35px !important;
+				background: #FFFFFF !important;
+				position: absolute !important;
+				display: block !important;
+				content: '' !important;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-52622603-1', 'auto');
+			ga('send', 'pageview');
+			
+		</script>
+		<!-- mobile header -->
+		<ul id="menu">
+			<li><a href="./products/lark-for-iphone">Lark for iPhone</a></li>
+			<li><a href="./team/health-committee">Lark Health Committee</a></li>
+			<!--<li class="no-display"><a href="./team/management-team">Management Team</a></li>-->
+			<!--<li class="no-display"><a href="./team/careers">Careers</a></li>-->
+			<!--<li class="no-display"><a href="./products/lark-activity-tracker">lark activity tracker</a></li>-->
+			<li><a href="./about/press">Press</a></li>
+			<!--<li class="no-display"><a href="http://blog.lark.com">Blog</a></li>-->
+			<li><a class="social twitter" href="https://www.twitter.com/ourlark" target="_blank"><span class="twitter-text">Follow us</span></a></li>
+			<li><a class="social facebook" href="https://www.facebook.com/ourLARK" target="_blank"><span class="facebook-text">Like us</span></a></li>
+			<li><a href="http://support.lark.com/home">Support</a></li>
+		</ul>
+		<header id="nav-header">
+			<div id="nav-toggle" href="#"><span></span></div>
+		</header>
+		<!-- end mobile header -->
+		<div id="page" class="page">
+			<div class="redirect-header">
+				<a href="#"></a>
+			</div>
+			<div class="redirect-table">
+				<div class="redirect-row">
+					<div class="redirect-cell icon-cell">
+						<div class="redirect-icon"></div>
+					</div>
+				</div>
+				<div class="redirect-row">
+					<div class="redirect-cell phrase-cell">
+						<div class="redirect-phrase">Why not try our mobile app?</div>
+					</div>
+				</div>
+				<div class="redirect-row">
+					<div class="redirect-cell appstore-cell">
+						<a href="https://itunes.apple.com/us/app/id912530754" target="itunes_store"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='./js/jquery-min.js'></script>
+		<script src="./js/menu.js"></script>
+		<script>
+			document.querySelector( "#nav-toggle" ).addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		</script>
+	</body>
+</html>

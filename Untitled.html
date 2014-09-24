@@ -1,0 +1,779 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>lark technologies</title>
+    <script src='js/jquery-min.js'></script>
+
+    <script type="text/javascript">
+	    $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+
+		var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+		if (isiPhone) {
+			window.location.replace("http://jasonpham.net/demo2/two.html");
+		}
+    </script>
+    <!--<meta name="apple-itunes-app" content="app-id=428417642">-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,inherit,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/standardize.css">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <!--<link rel="stylesheet" href="css/bamboo.css">-->
+
+    <style>
+        @font-face { font-family: 'akkurat-light';src: url(fonts/AkkuratStd-Light.eot);src: url(fonts/AkkuratStd-Light.eot?#iefix) format('embedded-opentype'),url(fonts/AkkuratStd-Light.woff) format('woff'),url(fonts/AkkuratStd-Light.ttf) format('truetype'),url(fonts/AkkuratStd-Light.svg#quartzregular) format('svg');font-weight: 400;font-style: normal; }
+
+        @font-face { font-family:'akkurat-bold';src:url(fonts/AkkuratStd-Bold.eot);src:url(fonts/AkkuratStd-Bold.eot?#iefix) format('embedded-opentype'),url(fonts/AkkuratStd-Bold.woff) format('woff'),url(fonts/AkkuratStd-Bold.ttf) format('truetype'),url(fonts/AkkuratStd-Bold.svg#quartzregular) format('svg');font-weight:700;font-style:normal; }
+
+        @font-face { font-family:'akkurat-regular';src:url(fonts/AkkuratStd-Regular.eot);src:url(fonts/AkkuratStd-Regular.eot?#iefix) format('embedded-opentype'),url(fonts/AkkuratStd-Regular.woff) format('woff'),url(fonts/AkkuratStd-Regular.ttf) format('truetype'),url(fonts/AkkuratStd-Regular.svg#quartzregular) format('svg');font-weight:400;font-style:normal; }
+
+        @font-face { font-family:'akkurat-italic';src:url(fonts/AkkuratStd-Italic.eot);src:url(fonts/AkkuratStd-Italic.eot?#iefix) format('embedded-opentype'),url(fonts/AkkuratStd-Italic.woff) format('woff'),url(fonts/AkkuratStd-Italic.ttf) format('truetype'),url(fonts/AkkuratStd-Italic.svg#quartzregular) format('svg');font-weight:400;font-style:normal; }
+
+        body {
+            font-family: 'akkurat-light',Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            line-height: 1.15;
+        }
+
+        .main section {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .page1 { background-image: url('images/bg-1.jpg'); }
+        .page2 { background-image: url('images/bg-2.jpg'); }
+        .page3 { background-image: url('images/bg-3.jpg'); }
+        .page4 { background-image: url('images/bg-4.jpg'); }
+
+        .onepage-wrapper .section {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-2 {
+            display: inline-block;
+            vertical-align: middle;
+            height: auto;
+            overflow: hidden;
+            z-index: 20;
+            width: 64px;
+            margin: auto 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .outer {
+            display: table;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .inner {
+            margin-left: auto;
+            margin-right: auto; 
+            width: 75%;
+        }
+
+        .prompt {
+        	width: 85%;
+            margin-left: 5%;
+            color: #FFF;
+            font-size: 2.7em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #prompt-4 {
+        	width: auto;
+        }
+
+        .prompt-a, .image-2-a {
+            margin-bottom: 5%;
+        }
+
+        #container-1 {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10%;
+        }
+
+        #container-2a {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10%;
+        }
+
+        #container-2b {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10%;
+        }
+
+        #container-3 {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10%;
+        }
+
+        #container-4 {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -8%;
+            text-align: center;
+        }
+
+        .container-buttons {
+            width: 75%;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #container-button-2a {
+            position: relative;
+        }
+
+        #container-button-2b {
+            position: relative;
+        }
+
+        .first-button {
+            margin-right: 15%;
+        }
+
+        .flat-button {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            width: 35%;
+            height: 60px;
+            padding: 0;
+            font-family: 'akkurat-bold';
+            font-size: 1.5em;
+            color: #FF820B;
+            text-align: center;
+            background: #FFF;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .flat-button:active {
+            top: 1px;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        ._input {
+            background-color: transparent;
+            display: inline-block;
+            position: relative;
+            width: 45%;
+            height: 60px;
+            padding: 0;
+            font-family: 'akkurat-bold';
+            font-size: 1.5em;
+            margin: 0px auto;
+            padding: 0px 10px;
+            border: 1px solid #FFF;
+            border-radius: 5px;
+            line-height: 1.38;
+            color: #FFF;
+        }
+
+        #button-7 {
+            border: 1px solid #FFF;
+            border-radius: 5px;
+            line-height: 1.38;
+            background-color: transparent;
+            width: 10%;
+			margin-left: 2%;
+        }
+
+        .menu-btn div {
+		    position: relative;
+
+		    padding-right: 8px;
+		    margin-top: -0.50em;
+		    line-height: 1.2;
+		    font-size: 18px;
+		    font-weight: 200;
+		    vertical-align: middle;
+		    z-index: 99;
+		}
+
+		.menu-btn span {
+		    display: block;
+		    width: 19px;
+		    height: 3px;
+		    margin: 4px 0;
+		    background: rgb(0,0,0);
+		    z-index: 99;
+		}
+
+		.responsive-menu{
+		    display: none;
+		}
+
+		.expand {
+		    display: block !important; 
+		}
+
+		.opacity {
+		    opacity: 0.2;
+		}
+
+		#android-badge img {
+			margin-right: 35px;
+			width: 139px;
+			height: 50px;
+			text-indent: -1000px;
+			overflow: hidden;
+		}
+
+		#ios-badge img {
+			width: 139px;
+			height: 50px;
+			text-indent: -1000px;
+			overflow: hidden;
+		}
+
+		#lark-badge img {
+			width: 78px;
+			height: 36px;
+			text-indent: -1000px;
+			overflow: hidden;
+		}
+
+		#fb-badge img {
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+		}
+		
+		#twitter-badge img {
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+		}
+
+		#badges {
+			width: 350px;
+			margin: 0 auto;
+			list-style: none outside none;	
+		}
+
+		.header-badges {
+			width: 30%;
+			text-align: center; 
+			list-style: none outside none;	
+		}
+
+		.header-links {
+			width: 58%;
+			text-align: right;
+		}
+
+		.header-social {
+			width: 11%;
+			text-align: right;
+		}
+
+		.header-social li {
+			margin-right: 10px !important;
+		}
+
+		#badges li {
+			display: inline-block;
+		}
+
+		#footer-list { 
+			font-family: 'akkurat-light';
+			text-align: center; 
+			margin-top: 40px;
+			margin-bottom: 30px; 
+		}
+		#footer-list li, #main-nav ul li { 
+			margin-right: 25px;
+			display: inline-block; 
+		}
+		#footer-list li a, #main-nav ul a { 
+			color: #FFF;
+			text-decoration: none;
+		}
+
+		#footer {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			height: auto;
+		}
+
+		#main-nav {
+			z-index: 999;
+			position: fixed;
+			top: 12px;
+			right: 0px;
+			left: 0;
+			width: 80%;
+			margin: 0px auto;
+			height: auto;	
+		}
+
+		#main-nav ul {
+			display: inline-block;
+			vertical-align: middle;
+			font-family: 'akkurat-light';
+		}
+
+		@media(max-width: 1400px) {
+
+		    .prompt {
+		        font-size: 2.2em;
+		    }
+
+		    .flat-button, ._input  {
+		        font-size: 1em;
+		    }
+		    #container-4 {
+		        width: 75%;
+		    }
+		    #container-4 .image-2 {
+		        margin-left: 15%;
+		    }
+
+		}
+
+		@media(max-width: 1200px) {
+		    .inner { width: 90%; }
+		    .flat-button { height: 50px; }
+		}
+
+		@media(max-width: 1000px) {
+
+		    #container-1, #container-2a, #container-2b, #container-3, #container-4 {
+		        width: 95%;
+		    }
+
+		    .prompt {
+		        font-size: 1.5em;
+		    }
+
+		    .flat-button, ._input  {
+		        font-size: 1em;
+		    }
+
+		    #container-4 .image-2 {
+		        margin-left: 15%;
+		    }
+		    #container-4 .prompt {
+		        width: 40%;
+		        margin-left: 1%;
+		    }
+		}
+
+		@media(max-width: 790px) {
+		    .prompt {
+		        width: 75%;
+		    }
+		}
+
+    </style>
+
+	<!--[if !IE 7]>
+		<style type="text/css">
+			#wrap {display:table;height:100%}
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+    <nav id="main-nav" class="navigation overflow">
+    	<ul class="header-badges">
+           	<li><a id="lark-badge" href="#"><img src="images/Lark-logo.png"></a></li>
+		</ul>
+		<ul class="header-links">
+			<li><a href="">About</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Support</a></li>
+		</ul>
+		<ul class="header-social">
+	        <li><a id="fb-badge" href=""><img src="images/fb.png"></a></li>
+            <li><a id="twitter-badge" href=""><img src="images/twitter.png"></a></li>
+		</ul>
+	</nav>
+
+    <div class="main">
+
+    	<header class="primary">
+			<span class="open icon">&#9776;</span>
+			<hgroup><h1>Menu</h1></hgroup>
+		</header>
+
+        <section class="page1">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <div id="container-1" class="hidden">
+                            <img class="image-2" src="images/Icon.png">
+                            <p class="prompt">Hi there. It looks like you'd like to get healthier and happier. That right?<span class="blinking-cursor">|</span></p>
+                        
+                            <div id="container-button-1" class="container-buttons">
+                                <input id="button-1" type="submit" value="Yeah" class="flat-button first-button">
+                                <input id="button-2" type="submit" value="Not sure" class="flat-button">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page2">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <div id="container-2a" class="hidden">
+                            <img class="image-2" src="images/Icon.png">
+                            <p class="prompt"></p>
+                        
+                            <div id="container-button-2a" class="container-buttons">
+                                <input id="button-3" type="submit" value="Sure" class="flat-button first-button">
+                                <input id="button-4" type="submit" value="Tell me more" class="flat-button">
+                            </div>
+                        </div>
+
+                        <div id="container-2b" class="hidden">
+                            <img class="image-2" src="images/Icon.png">
+                            <p class="prompt"></p>
+                        
+                            <div id="container-button-2b" class="container-buttons">
+                                <input id="button-5" type="submit" value="I'm listening" class="flat-button first-button">
+                                <input id="button-6" type="submit" value="Not buyin' it" class="flat-button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page3">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <div id="container-3" class="hidden">
+                            <img class="image-2 image-2-a" src="images/Icon.png">
+                            <p class="prompt prompt-a"></p>
+                            <img class="image-2" src="images/Icon.png">
+                            <p id="prompt-b" class="prompt"></p>
+                            
+                            <div id="container-button-3" class="container-buttons">
+                                <input class="_input" placeholder="Email" type="text">
+                                <input id="button-7" type="submit" value="Go!" class="flat-button first-button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page4">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <div id="container-4" class="hidden">
+                            <img class="image-2" src="images/Icon.png">
+                            <p id="prompt-4" class="prompt">See you on your phone!<span class="blinking-cursor">|</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer" class="page-row">
+    	<ul id="badges" class="opacity">
+        	<li><a id="android-badge" href=""><img src="images/android-2.png"></a></li>
+            <li><a id="ios-badge" href="https://itunes.apple.com/us/app/lark-up/id428417642?mt=8&uo=4" target="itunes_store"><img src="images/ios-2.png"></a></li>
+        </ul>
+		<ul id="footer-list">
+            <li><a href="http://lark.com/about-us/work">Careers</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="http://support.lark.com/home">Support</a></li>
+        </ul>
+	</footer>
+
+    <script src='js/jquery.onepage-scroll.js'></script>
+	<!--<script src="js/bamboo.0.1.js"></script>-->
+	<script src="js/blinking-cursor.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+			if($.browser.device) {
+				console.log('You are using a mobile device!');
+			}
+			else {
+				console.log('You are not using a mobile device!');
+			}
+
+        /*
+			var site = new Bamboo({
+				menu: true,
+				swipeToOpen: false,
+				breakpoint: 768,
+				menuWidth: 265,
+				headerHeight: 50,
+				resize: function(){
+				// function to call on page resize/orientation change
+				}
+			});
+		*/
+
+        	var detached_2 = $('.page2').detach();
+        	var detached_3 = $('.page3').detach();
+        	var detached_4 = $('.page4').detach();
+
+	        function call_scroll() {
+	            $(".main").onepage_scroll({
+	                sectionContainer: "section",
+	                easing: "ease-out",
+	                pagination: false,   
+	                responsiveFallback: false,
+	                loop: false
+	            });	
+	        }
+
+	    	var func_1 = function() {
+	    		$(detached_2).insertAfter($('.page1'));
+	    	};
+
+	    	var func_2 = function() {
+				$("#container-2a .prompt").html("Great! Using your phone as a health sensor, lark texts with you about your exercise, sleep, eating, and stress. Interested?<span class=blinking-cursor>|</span>");
+	    	};
+
+	        var func_3 = function() {
+	        	$(".main").moveTo(2);
+	        };
+
+	        var func_4 = function() {
+	            setTimeout(function(){
+	                 $("#container-2a").fadeIn(2000);
+	            }, 300);
+	        };
+
+			var func_5 = function () {
+	            setTimeout(function(){
+	                $("#container-1").addClass('opacity');
+	                $("#container-button-1").hide();
+	            }, 1500);
+			};
+
+			var func_6 = function() {
+				$("#container-2a").hide();
+	        	$("#container-2b").hide();					
+			};
+
+	        var func_7 = function() {
+	        	$("#container-2b .prompt").html("No worries. Studies have shown that the only way to get healthier in the long term is to do what makes you happy. Lark actually makes getting healthier really enjoyable.");	
+	        };
+
+	    	var func_8 = function() {
+	            setTimeout(function(){
+	                 $("#container-2b").fadeIn(2000);
+	            }, 300);
+	    	};
+
+	    	var func_9 = function() {
+                $("#container-3 .prompt").html("Hmmm...");
+                $("#container-3 #prompt-b").html("What's your email? The lark app will be emailed to you. It's free.");
+	    	};
+
+	    	var func_10 = function() {
+	    		$(detached_3).insertAfter($('.page2'));
+	    	};
+
+	    	var func_11 = function() {
+                $(".main").moveTo(3);
+	    	};
+
+			var func_12 = function() {
+                setTimeout(function(){
+                     $("#container-3").fadeIn(2000);
+                }, 300);	    	
+            };
+
+            var func_13 = function() {
+                setTimeout(function(){
+                    $("#container-2a").addClass('opacity');
+                    $("#container-button-2a").hide();
+                }, 1500);
+            };
+
+	    	var func_14 = function() {
+            	$("#container-3 .prompt").html("Lark is designed by <a>some of the top health experts from Harvard and Stanford</a>, so you're in good hands.");
+                $("#container-3 #prompt-b").html("What's your email? The lark app will be emailed to you. It's <strong>free.</strong>");
+	    	};
+
+			var func_15 = function() {
+	    		$("#container-3 .prompt").html("Give it a try. Download the lark app for <strong>free!</strong>");
+                $("#container-3 #prompt-b").text("Just need your email, so it can be sent to you.");
+	    	};
+		
+            var func_16 = function() {
+                setTimeout(function(){
+                    $("#container-2b").addClass('opacity');
+                    $("#container-button-2b").hide();
+                }, 1500);
+            };
+
+            var func_17 = function() {
+                $("#container-3 .prompt").text("Still not sure? The lark app is free, so test it out today.");
+                $("#container-3 #prompt-b").text("Just need your email, so it can be emailed to you.");
+            };
+
+            var func_18 = function() {
+	    		$(detached_4).insertAfter($('.page3'));
+	    		$("#badges").animate({opacity: 1.0}, 2000);
+	    	};
+
+	    	var func_19 = function() {
+                $(".main").moveTo(4);
+	    	};
+
+			var func_20 = function() {
+                setTimeout(function(){
+                     $("#container-4").fadeIn(2000);
+                }, 300);	    	
+            };
+
+			var func_21 = function() {
+                $("#container-3").addClass('opacity');	    	
+            };
+
+			var func_22 = function() {
+                setTimeout(function(){
+					$(".page1").detach();
+	                $(".page2").detach();
+	            	$(".page3").detach();
+                }, 1500);
+            };
+
+            var func_23 = function() {
+				blinkingCursor(document.querySelector('.blinking-cursor'));
+            };
+
+            $( '.menu-btn' ).click(function(){
+                $('.responsive-menu').toggleClass('expand');
+            });
+
+			call_scroll();            
+
+            $("#container-1").fadeIn(2000);
+
+            func_23();
+
+            $("#button-1").click(function(){
+    			var callbacks_1 = $.Callbacks();
+    			callbacks_1.add(func_1);
+    			callbacks_1.add(func_2);
+    			callbacks_1.add(call_scroll);
+    			callbacks_1.add(func_3);
+    			callbacks_1.add(func_4);
+
+//    			callbacks_1.add(func_23);
+
+    			callbacks_1.add(func_5);
+    			callbacks_1.add(func_6);
+    			callbacks_1.fire();
+            });
+
+            $("#button-2").click(function(){
+    			var callbacks_2 = $.Callbacks();
+    			callbacks_2.add(func_1);
+    			callbacks_2.add(func_6);
+				callbacks_2.add(func_7);
+    			callbacks_2.add(call_scroll);
+    			callbacks_2.add(func_3);
+    			callbacks_2.add(func_8);
+    			callbacks_2.add(func_5);
+    			callbacks_2.fire();
+            });
+
+            $(document).on('click', '#button-3', function() {
+				var callbacks_3 = $.Callbacks();
+    			callbacks_3.add(func_10);
+    			callbacks_3.add(func_9);
+    			callbacks_3.add(call_scroll);
+    			callbacks_3.add(func_11);
+    			callbacks_3.add(func_12);
+    			callbacks_3.add(func_13);
+    			callbacks_3.fire();
+            });
+
+            $(document).on('click', '#button-4', function() {
+				var callbacks_4 = $.Callbacks();
+    			callbacks_4.add(func_10);
+    			callbacks_4.add(func_14);
+    			callbacks_4.add(call_scroll);
+    			callbacks_4.add(func_11);
+    			callbacks_4.add(func_12);
+    			callbacks_4.add(func_13);
+    			callbacks_4.fire();
+            });
+
+            $(document).on('click', '#button-5', function() {
+				var callbacks_5 = $.Callbacks();
+    			callbacks_5.add(func_10);
+    			callbacks_5.add(func_15);
+    			callbacks_5.add(call_scroll);
+    			callbacks_5.add(func_11);
+    			callbacks_5.add(func_12);
+    			callbacks_5.add(func_16);
+    			callbacks_5.fire();
+            });
+
+            $(document).on('click', '#button-6', function() {
+                var callbacks_6 = $.Callbacks();
+    			callbacks_6.add(func_10);
+    			callbacks_6.add(func_17);
+    			callbacks_6.add(call_scroll);
+    			callbacks_6.add(func_11);
+    			callbacks_6.add(func_12);
+    			callbacks_6.add(func_16);
+    			callbacks_6.fire();
+            });
+
+            $(document).on('click', '#button-7', function() {
+                var callbacks_7 = $.Callbacks();
+    			callbacks_7.add(func_18);
+    			callbacks_7.add(call_scroll);
+    			callbacks_7.add(func_19);
+    			callbacks_7.add(func_20);
+    			callbacks_7.add(func_21);
+    			callbacks_7.add(func_22);
+    			callbacks_7.fire();
+            });
+        });
+    </script>
+</body>
+</html>
