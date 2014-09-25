@@ -103,6 +103,13 @@ function logoEffectsIn(){
 	console.log('logoEffectsIn');
 
 	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
+	//$(".active").children('.lark-icon').fadeIn('slow');
+	console.log($(".active").children('.lark-icon'));
+
+	$($(".active").parents(".inner")[0]).css("display", "block");
+
+
+
 	//$($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
 	//$(".lark-icon").fadeIn(1000);
 }

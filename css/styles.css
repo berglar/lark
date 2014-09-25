@@ -43,13 +43,13 @@ body {
   margin-left: auto;
 	margin-right: auto;
 	width: 75%;	/* 57% */
+
+  /*visibility: hidden; /* display: none */
+	display: none;
+
 }
 
-.inner {
-	margin-left: auto;
-	margin-right: auto;
-	vertical-align: middle;
-	width: 57%;
+.prompt-msg{
 	visibility: hidden;
 }
 
