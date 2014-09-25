@@ -346,7 +346,7 @@ height: 100%;
 	}
 
 	.flat-button {
-		/* note */ padding: ;
+		/* note */ padding: 13px 0px;
 		/* height: 45px; */
 		/* note */ font-size: 1.2em;
 	}
