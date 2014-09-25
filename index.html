@@ -89,91 +89,95 @@
 				</div>
 			</div>
 			<!-- end desktop header -->
-
-			<section class="page1">
-				<div class="outer">
-					<div class="middle">
-						<div class="inner">
-							<div id="container-1" class="hidden">
-								<div class="image-2"></div>
+<div class ="main-conversation">
+<section id="welcome" class="active">
+							<div id="welcome-msg" class="inner">
+								<div class="lark-icon"></div>
 								<p class="prompt">Hi there. It looks like you'd like to get healthier and happier. That right?<span id="blinking-cursor"></span></p>
-
-								<div id="container-button-1" class="container-buttons">
+								<div id="container-button-1" class="email-form-buttons">
 									<input id="button-1" type="submit" value="Yeah" class="flat-button first-button">
 									<input id="button-2" type="submit" value="Not sure" class="flat-button">
 								</div>
 
-							</div>
+
 						</div>
-					</div>
-				</div>
+
 			</section>
-			<canvas id="tutorial"></canvas>
 
-			<section class="page2">
-				<div class="outer">
-					<div class="middle">
-						<div class="inner">
-							<div id="container-2a" class="hidden">
-								<div class="image-2"></div>
-								<p class="prompt"></p>
-
-								<div id="container-button-2a" class="container-buttons">
-									<input id="button-3" type="submit" value="Sure" class="flat-button first-button">
-									<input id="button-4" type="submit" value="Tell me more" class="flat-button">
+<section id="moreInfo" class="active">
+	<div id="moreInfoYes-msg" class="inner">
+		<div class="lark-icon"></div>
+			<p class="prompt">Great! Using your phone as a health sensor, lark texts with you about your<span id="blinking-cursor"></span></p> <!-- <b>exercise, sleep, eating, and stress</b>. Interested?<span id="blinking-cursor"></span></p> -->
+								<div id="container-button-1" class="email-form-buttons">
+									<input id="button-1" type="submit" value="Sure." class="flat-button first-button">
+									<input id="button-2" type="submit" value="Tell me more" class="flat-button">
 								</div>
-							</div>
-
-							<div id="container-2b" class="hidden">
-								<div class="image-2"></div>
-								<p class="prompt"></p>
-
-								<div id="container-button-2b" class="container-buttons">
-									<input id="button-5" type="submit" value="I'm listening" class="flat-button first-button">
-									<input id="button-6" type="submit" value="Not buyin' it" class="flat-button">
+	</div>
+<div id="moreInfoNo-msg" class="inner">
+			<div class="lark-icon"></div>
+			<p class="prompt">No worries. Studies have shown that the only way to get healthier in the long term is to do what makes you happy. Lark actually makes getting healthier really enjoyable.<span id="blinking-cursor"></span></p>
+								<div id="container-button-1" class="email-form-buttons">
+									<input id="button-1" type="submit" value="I'm listening..." class="flat-button first-button">
+									<input id="button-2" type="submit" value="Not buyin' it" class="flat-button">
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+</div>
 
-			<section class="page3">
-				<div class="outer">
-					<div class="middle">
-						<div class="inner">
-							<div id="container-3" class="hidden">
-								<div class="image-2 image-2-a"></div>
-								<p class="prompt prompt-a"></p>
-								<div class="image-2"></div>
-								<p id="prompt-b" class="prompt"></p>
+</section>
 
-								<div id="container-button-3" class="container-buttons">
-									<form action="./appleEmail.php">
-										<input class="_input" placeholder="Email" name="email" type="email">
-										<input id="button-7" type="submit" value="Go!" class="flat-button first-button">
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<section id="emailPrompt">
+	<div id="emailPrompt-container" class="inner">
 
-			<section class="page4">
-				<div class="outer">
-					<div class="middle">
-						<div class="inner">
-							<div id="container-4" class="hidden">
-								<div class="image-2"></div>
-								<p id="prompt-4" class="prompt">See you on your phone!</p>
-							</div>
-						</div>
-					</div>
-			    </div>
-			</section>
-		</div>
-		<footer id="index-footer" class="page-row">
+	<div id="emailPromptA-msg">
+		<div class="lark-icon"></div>
+			<p class="prompt">Great! </p>
+
+			<div class="lark-icon"></div>
+				<p class="prompt">What's your email? The lark app will be emailed to you. <b>It's free.</b> </p>
+	</div>
+
+	<div id="emailPromptB-msg">
+		<div class="lark-icon"></div>
+		<p class="prompt">Lark is designed by <link>some of the top health experts from Harvard and Stanford</link>, so you're in good hands.</p>
+
+		<div class="lark-icon"></div>
+		<p class="prompt">What's your email? The lark app will be emailed to you. <b>It's free.</b></p>
+	</div>
+
+	<div id="emailPromptC-msg">
+		<div class="lark-icon"></div>
+			<p class="prompt">Give it a try. Download the lark app for <b>free!</b></p>
+
+<div class="lark-icon"></div>
+	<p class="prompt">Just need your email, so it can be sent to you. </p>
+	</div>
+
+	<div id="emailPromptD-msg">
+		<div class="lark-icon"></div>
+			<p class="prompt">Still not sure? The lark app is free, so test it out today.</p>
+			<div class="lark-icon"></div>
+				<p class="prompt">Just need your email, so it can be emailed to you. </p>
+	</div>
+
+	<div id="email-form" class="email-form-buttons">
+<form action="./appleEmail.php">
+	<input class="_input" placeholder="Email" name="email" type="email">
+	<input id="button-7" type="submit" value="Go!" class="flat-button first-button">
+</form>
+	</div>
+</div> <!-- ends .inner -->
+
+</section>
+
+<section id="confirmation">
+	<div id="confirmation-msg" class="inner">
+			<div class="lark-icon"></div>
+				<p class="prompt">See you on your phone!</p>
+			</div>
+</section>
+</div> <!-- ends .main-conversation -->
+</div> <!-- ends #page .main -->
+
+<footer id="index-footer" class="page-row">
 			<ul style="text-align:center; "id="badges" class="opacity">
 				<li class="appstore-li"><a href="https://itunes.apple.com/us/app/id912530754" target="itunes_store"></a></li>
 				<!--<li class="samsung-li"><a href="http://apps.samsung.com/mars/topApps/topAppsDetail.as?productId=000000848760"><img src="./images/samsung-appstore-badge.png"></a></li>-->

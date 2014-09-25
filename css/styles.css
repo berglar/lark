@@ -4,38 +4,29 @@ body {
 	line-height: 1.15;
 }
 
-.main section {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
-
-.main {
-	/*background: red !important;*/
-}
-
-.page1 {
-	background-image: url('../images/bg-1.jpg');
-}
-
-.page2 {
-	background-image: url('../images/bg-2.jpg');
-}
-
-.page3 {
-	background-image: url('../images/bg-3.jpg');
-}
-
-.page4 {
-	background-image: url('../images/bg-4.jpg');
-}
-
-.onepage-wrapper .section {
+.main-conversation {
 	width: 100%;
 	height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('../images/bg-1.jpg');
 }
 
-.image-2 {
+.main section {
+}
+
+section{
+	visibility: hidden;
+}
+
+.active{
+	visibility: visible;
+}
+
+
+.lark-icon {
 	background-image: url('../images/lark_avatar.png');
 	background-size: cover;
 	display: inline-block;
@@ -66,7 +57,7 @@ body {
 
 .inner {
 	margin-left: auto;
-	margin-right: auto; 
+	margin-right: auto;
 	width: 75%;
 }
 
@@ -84,11 +75,11 @@ body {
 }
 
 .prompt-a,
-.image-2-a {
+.lark-icon-a {
 	margin-bottom: 5%;
 }
 
-#container-1 {
+#welcome-msg {
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
@@ -238,7 +229,7 @@ body {
     #container-4 {
         width: 75%;
     }
-    #container-4 .image-2 {
+    #container-4 .lark-icon {
         margin-left: 15%;
     }
 }
@@ -247,31 +238,31 @@ body {
 	.inner {
 		width: 90%;
 	}
-	
+
 	.flat-button {
 		/*height: 50px;*/
 	}
 }
 
 @media(max-width: 1000px) {
-	#container-1,
+	#welcome-msg,
 	#container-2a,
 	#container-2b,
 	#container-3,
 	#container-4 {
 		width: 95%;
 	}
-	
+
 	.prompt {
 		font-size: 1.5em;
 	}
-	
+
 	.flat-button,
 	._input {
 		font-size: 1em;
 	}
-	
-	#container-4 .image-2 {
+
+	#container-4 .lark-icon {
 		margin-left: 15%;
 	}
 	#container-4 .prompt {

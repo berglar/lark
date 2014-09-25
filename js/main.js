@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+/*
+
 	var detached_2 = $('.page2').detach();
 	var detached_3 = $('.page3').detach();
 	var detached_4 = $('.page4').detach();
@@ -33,7 +36,7 @@ $(document).ready(function(){
 
 	var func_5 = function () {
         setTimeout(function(){
-            $("#container-1").addClass('opacity');
+            $("#welcome-msg").addClass('opacity');
             $("#container-button-1").hide();
         }, 1500);
 	};
@@ -138,7 +141,7 @@ $(document).ready(function(){
 
 	call_scroll();
 
-    $("#container-1").fadeIn(2000);
+    $("#welcome-msg").fadeIn(2000);
 
     func_23();
 
@@ -220,4 +223,5 @@ $(document).ready(function(){
 		callbacks_7.add(func_22);
 		callbacks_7.fire();
     });
-});
+*/
+}); //closes document.ready
