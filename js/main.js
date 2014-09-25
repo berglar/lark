@@ -1,270 +1,130 @@
+//var eventQueue = ["#welcome-msg", [moreInfoYes], ];
+
+
+var nextMsgId;
+
 $(document).ready(function(){
+	fadeInManager();
 
+	$(".yes-btn").on("click", function(){
+		effectsOut(true);
+	});
 
-    setTimeout(logoEffectsIn,1000);
-    setTimeout(textEffectsIn,3000); //offsets
-    setTimeout(btnEffectsIn,5000);
+	$(".no-btn").on("click", function(){
+		effectsOut(false);
+	});
 
-
-
-
-
-$(".yes-btn").on("click",effectsOut);
-$(".no-btn").on("click",effectsOut);
 
 
 }); //closes document.ready
 
+function fadeInManager(nextMsgId){
+	console.log('fadeInManager');
+	//initialize
+	if (arguments.length == 0 || nextMsgId === undefined){
+		$("#welcome-msg").addClass("active");
+	}
 
-//bring in 1st div
+	else{
+		console.log('nextMsgId' + nextMsgId);
+	  $(".active").each(function(){
+			$(this).removeClass("active");
+		});
+    $("#"+nextMsgId).addClass("active");
+
+    if (nextMsgId.indexOf("email") == 0){
+			console.log("email corner case");
+			$("#email-form").addClass("active");
+		}
+	}
+
+
+	//TODO delete this when done
+	logoEffectsIn();
+	textEffectsIn();
+	btnEffectsIn();
+
+	//TODO put this back when done
+	//setTimeout(logoEffectsIn,1000);
+	//setTimeout(textEffectsIn,3000); //offsets
+	//setTimeout(btnEffectsIn,5000);
+
+};
+
+
+function signalNext(lastMsgId, yesSelect){
+	console.log("signalNext");
+	var nextMsgId;
+	var last = lastMsgId;
+	var select;
+
+	if ($($("#" + lastMsgId).parent(".inner")).id == "emailPrompt-container"){
+		nextMsgId = "confirmation-msg";
+		fadeInManager();
+		return;
+	}
+
+	switch(lastMsgId){
+		case "welcome-msg":
+			if (yesSelect === true){
+				nextMsgId = "moreInfoYes-msg";
+				break;
+			}
+			else if (yesSelect == false){
+				nextMsgId = "moreInfoNo-msg";
+				break;
+			}
+		case "moreInfoYes-msg":
+			if (yesSelect == true){
+				nextMsgId = "emailPromptA-msg";
+				break;
+			}
+			else if (yesSelect == false){
+				nextMsgId = "emailPromptB-msg";
+				break;
+			}
+		case "moreInfoNo-msg":
+			if (yesSelect == true){
+				nextMsgId = "emailPromptC-msg";
+				break;
+			}
+			else if (yesSelect == false){
+			  nextMsgId = "emailPromptD-msg";
+				break;
+			}
+	}
+    fadeInManager(nextMsgId);
+	}
+
 function logoEffectsIn(){
-	console.log('within logo effects');
-	 $($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
-//$(".lark-icon").fadeIn(1000);
-
+	console.log('logoEffectsIn');
+	$($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
+	//$(".lark-icon").fadeIn(1000);
 }
 
-//bring in 2nd div
+
 function textEffectsIn(){
-		console.log('within text effects');
-$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
+	console.log('textEffectsIn');
+	$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
 }
 
-//bring in 3rd div
+
 function btnEffectsIn(){
-		console.log('within btn effects');
-$($(".active").children('.convo-btns')).css('visibility','visible').hide().fadeIn('slow');
+	console.log('btnEffectsIn');
+	console.log($(".active"));
+	$(".active").children('.convo-btns').each(function(){ //corner case since html layout is different
+		$(this).css('visibility','visible').hide().fadeIn('slow');
+	});
+
+
 }
 
-//TODO make fancier?
-function effectsOut(){
-
-$($(".active").children(".lark-icon")).fadeOut(1000);
-$($(".active").children(".prompt")).fadeOut(1000);
-$($(".active").children(".convo-btns")).fadeOut(1000);
+//TODO make fancier
+//clickedYes is true if user clicked yes button; false if user clicked no button
+function effectsOut(btnSelection){
+	console.log('effectsOut');
+	//TODO callback after fade out to bring up the next state
+	$($(".active").children(".lark-icon")).fadeOut(1000);
+	$($(".active").children(".prompt")).fadeOut(1000);
+	$($(".active").children(".convo-btns")).fadeOut(1000, signalNext($(".active")[0].id, btnSelection));
 }
-
-/*
-
-	var detached_2 = $('.page2').detach();
-	var detached_3 = $('.page3').detach();
-	var detached_4 = $('.page4').detach();
-
-    function call_scroll() {
-        $(".main").onepage_scroll({
-            sectionContainer: "section",
-            easing: "ease-out",
-            pagination: false,
-            responsiveFallback: false,
-            loop: false
-        });
-    }
-
-	var func_1 = function() {
-		$(detached_2).insertAfter($('.page1'));
-	};
-
-	var func_2 = function() {
-		$("#container-2a .prompt").html("Great! Using your phone as a health sensor, lark texts with you about your exercise, sleep, eating, and stress. Interested?");
-	};
-
-    var func_3 = function() {
-    	$(".main").moveTo(2);
-    };
-
-    var func_4 = function() {
-        setTimeout(function(){
-             $("#container-2a").fadeIn(2000);
-        }, 300);
-    };
-
-	var func_5 = function () {
-        setTimeout(function(){
-            $("#welcome-msg").addClass('opacity');
-            $("#container-button-1").hide();
-        }, 1500);
-	};
-
-	var func_6 = function() {
-		$("#container-2a").hide();
-    	$("#container-2b").hide();
-	};
-
-    var func_7 = function() {
-    	$("#container-2b .prompt").html("No worries. Studies have shown that the only way to get healthier in the long term is to do what makes you happy. Lark actually makes getting healthier really enjoyable.");
-    };
-
-	var func_8 = function() {
-        setTimeout(function(){
-             $("#container-2b").fadeIn(2000);
-        }, 300);
-	};
-
-	var func_9 = function() {
-        $("#container-3 .prompt").html("Hmmm...");
-        $("#container-3 #prompt-b").html("What's your email? The lark app will be emailed to you. It's free.");
-	};
-
-	var func_10 = function() {
-		$(detached_3).insertAfter($('.page2'));
-	};
-
-	var func_11 = function() {
-        $(".main").moveTo(3);
-	};
-
-	var func_12 = function() {
-        setTimeout(function(){
-             $("#container-3").fadeIn(2000);
-        }, 300);
-    };
-
-    var func_13 = function() {
-        setTimeout(function(){
-            $("#container-2a").addClass('opacity');
-            $("#container-button-2a").hide();
-        }, 1500);
-    };
-
-	var func_14 = function() {
-    	$("#container-3 .prompt").html("Lark is designed by <a>some of the top health experts from Harvard and Stanford</a>, so you're in good hands.");
-        $("#container-3 #prompt-b").html("What's your email? The lark app will be emailed to you. It's <strong>free.</strong>");
-	};
-
-	var func_15 = function() {
-		$("#container-3 .prompt").html("Give it a try. Download the lark app for <strong>free!</strong>");
-        $("#container-3 #prompt-b").text("Just need your email, so it can be sent to you.");
-	};
-
-    var func_16 = function() {
-        setTimeout(function(){
-            $("#container-2b").addClass('opacity');
-            $("#container-button-2b").hide();
-        }, 1500);
-    };
-
-    var func_17 = function() {
-        $("#container-3 .prompt").text("Still not sure? The lark app is free, so test it out today.");
-        $("#container-3 #prompt-b").text("Just need your email, so it can be emailed to you.");
-    };
-
-    var func_18 = function() {
-		$(detached_4).insertAfter($('.page3'));
-		$("#badges").animate({opacity: 1.0}, 2000);
-	};
-
-	var func_19 = function() {
-        $(".main").moveTo(4);
-	};
-
-	var func_20 = function() {
-        setTimeout(function(){
-             $("#container-4").fadeIn(2000);
-        }, 300);
-    };
-
-	var func_21 = function() {
-        $("#container-3").addClass('opacity');
-    };
-
-	var func_22 = function() {
-        setTimeout(function(){
-			$(".page1").detach();
-            $(".page2").detach();
-        	$(".page3").detach();
-        }, 1500);
-    };
-
-    var func_23 = function() {
-		blinkingCursor(document.querySelector('.blinking-cursor'));
-    };
-
-    $( '.menu-btn' ).click(function(){
-        $('.responsive-menu').toggleClass('expand');
-    });
-
-	call_scroll();
-
-    $("#welcome-msg").fadeIn(2000);
-
-    func_23();
-
-    $("#button-1").click(function(){
-		var callbacks_1 = $.Callbacks();
-		callbacks_1.add(func_1);
-		callbacks_1.add(func_2);
-		callbacks_1.add(call_scroll);
-		callbacks_1.add(func_3);
-		callbacks_1.add(func_4);
-		callbacks_1.add(func_5);
-		callbacks_1.add(func_6);
-		callbacks_1.fire();
-    });
-
-    $("#button-2").click(function(){
-		var callbacks_2 = $.Callbacks();
-		callbacks_2.add(func_1);
-		callbacks_2.add(func_6);
-		callbacks_2.add(func_7);
-		callbacks_2.add(call_scroll);
-		callbacks_2.add(func_3);
-		callbacks_2.add(func_8);
-		callbacks_2.add(func_5);
-		callbacks_2.fire();
-    });
-
-    $(document).on('click', '#button-3', function() {
-		var callbacks_3 = $.Callbacks();
-		callbacks_3.add(func_10);
-		callbacks_3.add(func_9);
-		callbacks_3.add(call_scroll);
-		callbacks_3.add(func_11);
-		callbacks_3.add(func_12);
-		callbacks_3.add(func_13);
-		callbacks_3.fire();
-    });
-
-    $(document).on('click', '#button-4', function() {
-		var callbacks_4 = $.Callbacks();
-		callbacks_4.add(func_10);
-		callbacks_4.add(func_14);
-		callbacks_4.add(call_scroll);
-		callbacks_4.add(func_11);
-		callbacks_4.add(func_12);
-		callbacks_4.add(func_13);
-		callbacks_4.fire();
-    });
-
-    $(document).on('click', '#button-5', function() {
-		var callbacks_5 = $.Callbacks();
-		callbacks_5.add(func_10);
-		callbacks_5.add(func_15);
-		callbacks_5.add(call_scroll);
-		callbacks_5.add(func_11);
-		callbacks_5.add(func_12);
-		callbacks_5.add(func_16);
-		callbacks_5.fire();
-    });
-
-    $(document).on('click', '#button-6', function() {
-        var callbacks_6 = $.Callbacks();
-		callbacks_6.add(func_10);
-		callbacks_6.add(func_17);
-		callbacks_6.add(call_scroll);
-		callbacks_6.add(func_11);
-		callbacks_6.add(func_12);
-		callbacks_6.add(func_16);
-		callbacks_6.fire();
-    });
-
-    $(document).on('click', '#button-7', function() {
-        var callbacks_7 = $.Callbacks();
-		callbacks_7.add(func_18);
-		callbacks_7.add(call_scroll);
-		callbacks_7.add(func_19);
-		callbacks_7.add(func_20);
-		callbacks_7.add(func_21);
-		callbacks_7.add(func_22);
-		callbacks_7.fire();
-    });
-*/
