@@ -241,6 +241,12 @@ height: 100%;
 	transform: translateZ(0px);
 	transition-duration: 0.3s;
 	transition-property: transform;
+	-webkit-border-radius: 20px 0px 20px 0px;
+	-moz-border-radius: 20px 0px 20px 0px;
+	border-radius: 20px 0px 20px 0px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
 }
 
 .flat-button:active {
