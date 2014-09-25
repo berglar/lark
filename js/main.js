@@ -3,6 +3,11 @@
 
 var nextMsgId;
 
+var logoTimeout = 1000;
+var textTimeout = 3000;
+var btnTimeout = 5000;
+
+var emailCaseFlag = false;
 $(document).ready(function(){
 	fadeInManager();
 
@@ -22,7 +27,9 @@ function fadeInManager(nextMsgId){
 	console.log('fadeInManager');
 	//initialize
 	if (arguments.length == 0 || nextMsgId === undefined){
-		$("#welcome-msg").addClass("active");
+//TODO CHANGE
+	$("#welcome-msg").addClass("active");
+
 	}
 
 	else{
@@ -35,26 +42,61 @@ function fadeInManager(nextMsgId){
 	//	});
     $("#"+nextMsgId).addClass("active");
 
-    if (nextMsgId.indexOf("email") == 0){
+    if (nextMsgId.indexOf("email") == 0){ //email case
 			console.log("email corner case");
 			$("#email-form").addClass("active");
+			emailCaseFlag = true;
 		}
 	}
-
-
-	//TODO delete this when done
 /*
-	logoEffectsIn();
-	textEffectsIn();
-	btnEffectsIn();
 
-*/
-//logoEffectsIn();
-	setTimeout(logoEffectsIn,1000);
-	setTimeout(textEffectsIn,3000); //offsets
-	setTimeout(btnEffectsIn,5000);
+if (emailCaseFlag == true){
+	loadEmailConvo();
+}
+else if (emailCaseFlag == false){
+	*/
+	setTimeout(logoEffectsIn,logoTimeout);
+	setTimeout(textEffectsIn,textTimeout); //offsets
+	setTimeout(btnEffectsIn,btnTimeout);
+//}
 
 };
+
+function loadEmailConvo(){
+
+   setTimeout(loadLogo1, 1000);
+   setTimeout(loadText1, 3000);
+   setTimeout(loadLogo2, 4000);
+   setTimeout(loadText2, 6000);
+   setTimeout(loadButtons, 7000); //this should be the function we already have.
+
+  emailCaseFlag = false; //reset
+}
+
+function loadLogo1(){
+
+ $(".active").children(".lark-first").css("visibility","visible").hide().fadeIn('fast');
+
+ }
+
+ function loadText1(){
+
+ $(".active").children(".prompt-first").css("visibility","visible").hide().fadeIn('fast');
+
+ }
+
+ function loadLogo2(){
+
+ $(".active").children(".lark-second").css("visibility","visible").hide().fadeIn('fast');
+
+ }
+
+ function loadText2(){
+
+ $(".active").children(".prompt-second").css("visibility","visible").hide().fadeIn('fast');
+
+ }
+
 
 
 function signalNext(lastMsgId, yesSelect){

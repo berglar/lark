@@ -88,9 +88,47 @@ height: 100%;
 	margin: auto 0;
 }
 
+.lark-first{
+  position: relative;
+}
+
+.lark-second{
+
+		position: relative;
+}
+
+.prompt-first{
+
+		position: relative;
+}
+
+.prompt-second{
+
+		position: relative;
+}
+
+
+@keyframes bounce{
+	0% {
+		transform:translateY(-100%);
+		opacity: 0;
+	}
+	5% {
+		transform:translateY(-100%);
+		opacity: 0;
+	}
+	15% {
+		transform:translateY(0);
+		padding-bottom: 5px;
+	}
+	30% {
+		transform:translateY(-50%);
+	}
+}
+
 .email-form-buttons{
 
-
+  position: relative;
 }
 
 .convo-btns{
