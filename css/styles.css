@@ -62,6 +62,7 @@ body {
 
 
 .lark-icon {
+	visibility: hidden;
 	background-image: url('../images/lark_avatar.png');
 	background-size: cover;
 	display: inline-block;

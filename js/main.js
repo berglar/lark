@@ -43,14 +43,16 @@ function fadeInManager(nextMsgId){
 
 
 	//TODO delete this when done
+/*
 	logoEffectsIn();
 	textEffectsIn();
 	btnEffectsIn();
 
-	//TODO put this back when done
-	//setTimeout(logoEffectsIn,1000);
-	//setTimeout(textEffectsIn,3000); //offsets
-	//setTimeout(btnEffectsIn,5000);
+*/
+//logoEffectsIn();
+	setTimeout(logoEffectsIn,1000);
+	setTimeout(textEffectsIn,3000); //offsets
+	setTimeout(btnEffectsIn,5000);
 
 };
 
@@ -101,22 +103,18 @@ function signalNext(lastMsgId, yesSelect){
 
 function logoEffectsIn(){
 	console.log('logoEffectsIn');
-
-	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
-	//$(".active").children('.lark-icon').fadeIn('slow');
 	console.log($(".active").children('.lark-icon'));
-
-	$($(".active").parents(".inner")[0]).css("display", "block");
-
+	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
 
 
-	//$($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
-	//$(".lark-icon").fadeIn(1000);
+//$($(".active").parents(".inner")[0]).css("display", "block");
+
 }
 
 
 function textEffectsIn(){
 	console.log('textEffectsIn');
+	console.log($(".active").children('.prompt'));
   $(".active").children('.prompt').css('visibility','visible').hide().fadeIn('slow');
 //	$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
 }
@@ -126,12 +124,17 @@ function btnEffectsIn(){
 	console.log('btnEffectsIn');
 	console.log($(".active"));
 
-	$(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
-	//$(".active").children('.convo-btns').each(function(){ //corner case since html layout is different
-	//	$(this).css('visibility','visible').hide().fadeIn('slow');
-	//});
+  var _jq_currYesBtn = $(".active").children('.convo-btns').children(".yes-btn");
+	var _jq_currNoBtn = $(".active").children('.convo-btns').children(".no-btn");
+	if (_jq_currYesBtn.length > 0){
+		$(_jq_currYesBtn).css('visibility', 'visible').hide().fadeIn('slow');
+		setTimeout(function(){
+			$(_jq_currNoBtn).css('visibility', 'visible').hide().fadeIn('slow');
+		}, 1000);
 
+	}
 
+	//$(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
 }
 
 //TODO make fancier
