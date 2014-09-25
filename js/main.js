@@ -39,9 +39,9 @@ $($(".active").children('.convo-btns')).css('visibility','visible').hide().fadeI
 //TODO make fancier?
 function effectsOut(){
 
-$(".lark-icon").fadeOut(1000);
-$(".prompt").fadeOut(1000);
-$(".convo-btns").fadeOut(1000);
+$($(".active").children(".lark-icon")).fadeOut(1000);
+$($(".active").children(".prompt")).fadeOut(1000);
+$($(".active").children(".convo-btns")).fadeOut(1000);
 }
 
 /*
