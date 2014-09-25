@@ -27,9 +27,12 @@ function fadeInManager(nextMsgId){
 
 	else{
 		console.log('nextMsgId' + nextMsgId);
-	  $(".active").each(function(){
-			$(this).removeClass("active");
-		});
+
+
+	    $(".active").removeClass("active");
+	 // $(".active").each(function(){
+	//		$(this).removeClass("active");
+	//	});
     $("#"+nextMsgId).addClass("active");
 
     if (nextMsgId.indexOf("email") == 0){
@@ -98,23 +101,28 @@ function signalNext(lastMsgId, yesSelect){
 
 function logoEffectsIn(){
 	console.log('logoEffectsIn');
-	$($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
+
+	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
+	//$($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
 	//$(".lark-icon").fadeIn(1000);
 }
 
 
 function textEffectsIn(){
 	console.log('textEffectsIn');
-	$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
+  $(".active").children('.prompt').css('visibility','visible').hide().fadeIn('slow');
+//	$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
 }
 
 
 function btnEffectsIn(){
 	console.log('btnEffectsIn');
 	console.log($(".active"));
-	$(".active").children('.convo-btns').each(function(){ //corner case since html layout is different
-		$(this).css('visibility','visible').hide().fadeIn('slow');
-	});
+
+	$(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+	//$(".active").children('.convo-btns').each(function(){ //corner case since html layout is different
+	//	$(this).css('visibility','visible').hide().fadeIn('slow');
+	//});
 
 
 }
@@ -124,7 +132,14 @@ function btnEffectsIn(){
 function effectsOut(btnSelection){
 	console.log('effectsOut');
 	//TODO callback after fade out to bring up the next state
-	$($(".active").children(".lark-icon")).fadeOut(1000);
-	$($(".active").children(".prompt")).fadeOut(1000);
-	$($(".active").children(".convo-btns")).fadeOut(1000, signalNext($(".active")[0].id, btnSelection));
+
+	//$($(".active").children(".lark-icon")).fadeOut(1000);
+	$(".active").children(".lark-icon").fadeOut(1000);
+
+	//$($(".active").children(".prompt")).fadeOut(1000);
+	$(".active").children(".prompt").fadeOut(1000);
+
+	//$($(".active").children(".convo-btns")).fadeOut(1000, signalNext($(".active")[0].id, btnSelection));
+  $(".active").children(".convo-btns").fadeOut(1000,signalNext($(".active")[0].id, btnSelection));
+
 }

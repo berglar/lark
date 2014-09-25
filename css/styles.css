@@ -289,3 +289,127 @@ body {
 		width: 75%;
 	}
 }
+
+
+
+
+#cloudy {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1000;
+	top: 30%;
+	background-image: url('../images/clouds.png');
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	opacity: 0.5;
+	-webkit-animation: moveclouds 150s linear infinite;
+	-moz-animation: moveclouds 150s linear infinite;
+	-o-animation: moveclouds 150s linear infinite;
+}
+
+#cloudy2 {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 30;
+	top: 20%;
+	background-image: url('../images/clouds.png');
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	opacity: 0.5;
+	-webkit-animation: movecloudss 100s linear infinite;
+	-moz-animation: movecloudss 100s linear infinite;
+	-o-animation: movecloudss 100s linear infinite;
+	animation: movecloudss 100s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 60%;}
+	100% {margin-left: -100%;}
+}
+
+@-moz-keyframes moveclouds {
+	0% {margin-left: 60%;}
+	100% {margin-left: -100%;}
+}
+
+@-o-keyframes moveclouds {
+	0% {margin-left: 60%;}
+	100% {margin-left: -100%;}
+}
+
+@-webkit-keyframes movecloudss {
+	0% {margin-left: 50%;}
+	100% {margin-left: -100%;}
+}
+
+@-moz-keyframes movecloudss {
+	0% {margin-left: 50%;}
+	100% {margin-left: -100%;}
+}
+
+@-o-keyframes movecloudss {
+	0% {margin-left: 50%;}
+	100% {margin-left: -100%;}
+}
+
+.page2 {
+	background-image: url('../images/bg.jpg') !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative; /* Set the position property so z-index will apply */
+	z-index: 20; /* Make sure this is higher than #menu */
+	height: 100%;
+	-webkit-animation: lightenup 30s infinite;
+	-moz-animation: lightenup 30s infinite;
+	-o-animation: lightenup 30s infinite;
+	animation: lightenup 30s infinite;
+}
+
+@-webkit-keyframes lightenup {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes lightenup {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes lightenup {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+#sunshine {
+	height: 10000px;
+	width: 100%;
+	position: absolute;
+	z-index: 900;
+    background: -webkit-radial-gradient(circle,yellow,blue); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle,yellow,blue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle,yellow,blue); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle,yellow,blue); /* Standard syntax (must be last) */
+	opacity: 0.5;
+	overflow: hidden;
+	-webkit-animation: sunrise 30s linear infinite;
+	-moz-animation: sunrise 30s linear infinite;
+	-o-animation: sunrise 30s linear infinite;
+	animation: sunrise 30s linear infinite;
+}
+
+@-webkit-keyframes sunrise {
+	0% {margin-top: 0px}
+	100% {margin-top: -4000px}
+}
+
+@-moz-keyframes sunrise {
+	0% {margin-top: 0px}
+	100% {margin-top: -4000px}
+}
+
+@-o-keyframes sunrise {
+	0% {margin-top: 0px}
+	100% {margin-top: -4000px}
+}
