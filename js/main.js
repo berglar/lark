@@ -19,7 +19,7 @@ $(".no-btn").on("click",effectsOut);
 //bring in 1st div
 function logoEffectsIn(){
 	console.log('within logo effects');
-	 $('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
+	 $($(".active").children('.lark-icon')).css('visibility','visible').hide().fadeIn('slow');
 //$(".lark-icon").fadeIn(1000);
 
 }
@@ -27,15 +27,13 @@ function logoEffectsIn(){
 //bring in 2nd div
 function textEffectsIn(){
 		console.log('within text effects');
-
-$('.prompt').css('visibility','visible').hide().fadeIn('slow');
+$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
 }
 
 //bring in 3rd div
 function btnEffectsIn(){
 		console.log('within btn effects');
-
-$('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+$($(".active").children('.convo-btns')).css('visibility','visible').hide().fadeIn('slow');
 }
 
 //TODO make fancier?
