@@ -712,8 +712,8 @@ body strong {
 .appstore-cell a,
 .appstore-li a {
 	/* display and overflow disabled for flow in table with convo*/
-	/*display: inline-block; */
-	/*overflow: hidden;*/
+	display: inline-block;
+	overflow: hidden;
 	background: url('https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png') no-repeat;
 	width: 135px;
 	height: 40px;
