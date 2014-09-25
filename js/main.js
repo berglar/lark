@@ -1,13 +1,16 @@
 //var eventQueue = ["#welcome-msg", [moreInfoYes], ];
 
 
-var nextMsgId;
+var nextMsgId; //passes around state
 
-var logoTimeout = 1000;
-var textTimeout = 3000;
-var btnTimeout = 5000;
+var logoTimeout = 1000; //first logo fade-in
+var textTimeout = 1500; //prompt fade-in
+var btnTimeout = 2000; //first button fade-in
+var btn2Timeout = 500; //second button fade-in
 
-var emailCaseFlag = false;
+var fadeOutTimeout = 1000; //delay for fade out
+
+var emailCaseFlag = false; //flag to init 2-stage animation
 $(document).ready(function(){
 	fadeInManager();
 
@@ -62,13 +65,14 @@ else if (emailCaseFlag == false){
 
 };
 
+//two-part animation for email conversation sequence
 function loadEmailConvo(){
 
-   setTimeout(loadLogo1, 1000);
-   setTimeout(loadText1, 3000);
-   setTimeout(loadLogo2, 4000);
-   setTimeout(loadText2, 6000);
-   setTimeout(btnEffectsIn, 7000); //this should be the function we already have.
+   setTimeout(loadLogo1, logoTimeout);
+   setTimeout(loadText1, textTimeout);
+   setTimeout(loadLogo2, logoTimeout*2);
+   setTimeout(loadText2, textTimeout*2);
+   setTimeout(btnEffectsIn, btnTimeout*2);
 
   emailCaseFlag = false; //reset
 }
@@ -146,7 +150,7 @@ function signalNext(lastMsgId, yesSelect){
 function logoEffectsIn(){
 	console.log('logoEffectsIn');
 	console.log($(".active").children('.lark-icon'));
-	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
+	$(".active").children('.lark-icon').css('visibility','visible').hide().fadeIn('fast');
 
 
 //$($(".active").parents(".inner")[0]).css("display", "block");
@@ -157,7 +161,7 @@ function logoEffectsIn(){
 function textEffectsIn(){
 	console.log('textEffectsIn');
 	console.log($(".active").children('.prompt'));
-  $(".active").children('.prompt').css('visibility','visible').hide().fadeIn('slow');
+  $(".active").children('.prompt').css('visibility','visible').hide().fadeIn('fast');
 //	$($(".active").children('.prompt')).css('visibility','visible').hide().fadeIn('slow');
 }
 
@@ -170,14 +174,14 @@ function btnEffectsIn(){
 	var _jq_currNoBtn = $(".active").children('.convo-btns').children(".no-btn");
 	if (_jq_currYesBtn.length > 0){
     console.log('yes and no animating separately');
-		$(_jq_currYesBtn).css('visibility', 'visible').hide().fadeIn('slow');
+		$(_jq_currYesBtn).css('visibility', 'visible').hide().fadeIn('fast');
 		setTimeout(function(){
-			$(_jq_currNoBtn).css('visibility', 'visible').hide().fadeIn('slow');
-		}, 1000);
+			$(_jq_currNoBtn).css('visibility', 'visible').hide().fadeIn('fast');
+		}, btn2Timeout);
 
 	}
 	else{
-	  $(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+	  $(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('fast');
   }
 }
 
@@ -188,12 +192,12 @@ function effectsOut(btnSelection){
 	//TODO callback after fade out to bring up the next state
 
 	//$($(".active").children(".lark-icon")).fadeOut(1000);
-	$(".active").children(".lark-icon").fadeOut(1000);
+	$(".active").children(".lark-icon").fadeOut(fadeOutTimeout);
 
 	//$($(".active").children(".prompt")).fadeOut(1000);
-	$(".active").children(".prompt").fadeOut(1000);
+	$(".active").children(".prompt").fadeOut(fadeOutTimeout);
 
 	//$($(".active").children(".convo-btns")).fadeOut(1000, signalNext($(".active")[0].id, btnSelection));
-  $(".active").children(".convo-btns").fadeOut(1000,signalNext($(".active")[0].id, btnSelection));
+  $(".active").children(".convo-btns").fadeOut(fadeOutTimeout,signalNext($(".active")[0].id, btnSelection));
 
 }
