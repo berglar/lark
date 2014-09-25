@@ -5,13 +5,19 @@ body {
 }
 
 .main{
-	position: absolute;
+	/*position: absolute;*/
+	height: 100%;
+	width: 100%;
 	top: 0%;
+	left: 0px;
+
+	display: block;
+	position: relative;
+
+	margin: 0;
 }
 
-#convo-table{
-	border: 4px solid blue;
-}
+
 .outer{
 	display: table;
 	position: absolute;
@@ -24,9 +30,7 @@ body {
 	background-image: url('../images/bg-1.jpg');
 }
 
-#convo-content{
-	border: 3px solid red;
-}
+
 .middle{
 	display: table-cell;
 	vertical-align: middle;
@@ -34,12 +38,11 @@ body {
 
 
 .inner{
-	border: 5px solid white;
   margin-left: auto;
 	margin-right: auto;
 	width: 75%;	/* 57% */
 
-	position: absolute;
+	/*position: absolute;   for centering disable this*/
 
   /*visibility: hidden; /* display: none */
 	/*display: none;*/
@@ -49,6 +52,9 @@ body {
 .prompt-msg{
 	visibility: hidden;
 	position: absolute;
+	width: 75%;
+	margin-top: -10%;
+	display: block;
 }
 
 .active{
@@ -74,26 +80,19 @@ body {
 }
 
 .convo-btns{
-	visibility: hidden;
 	position: absolute;
+	width: 75%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	visibility: hidden;
 }
 
 .hidden {
 	display: none;
 }
-
-.outer {
-	display: table;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-
-.middle {
-	display: table-cell;
-	vertical-align: middle;
-}
-
 
 
 .prompt {
@@ -102,7 +101,6 @@ body {
 	color: #FFF;
 	font-size: 2.7em;
 	display: inline-block;
-	vertical-align: middle;
 }
 
 .convo-btns{
@@ -123,7 +121,7 @@ body {
 }
 
 
-
+/*
 #container-2 {
 	width: 75%;
 	margin-left: auto;
@@ -168,6 +166,7 @@ body {
 #container-button-2b {
 	position: relative;
 }
+*/
 
 .first-button {
 	margin-right: 15%;
@@ -243,10 +242,11 @@ body {
 	background: rgb(0,0,0);
 	z-index: 99;
 }
-
+/*
 .opacity {
 	opacity: 0.2;
 }
+*/
 
 #index-footer {
 	width: 100%;

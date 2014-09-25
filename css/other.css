@@ -75,8 +75,8 @@ body strong {
 
 #page {
 	display: block;
-	position: relative; /* Set the position property so z-index will apply */
-	z-index: 40; /* Make sure this is higher than #menu */
+	/*position: relative; /* Set the position property so z-index will apply */
+	/*z-index: 40; /* Make sure this is higher than #menu */
 }
 
 .other-page {
@@ -112,7 +112,7 @@ body strong {
 		display: inline-block;
 		float: left;
 	}
-	
+
 	.logo-white {
 		background-image: url('../images/Lark-logo.png');
 		background-size: cover;
@@ -121,26 +121,26 @@ body strong {
 		display: inline-block;
 		float: left;
 	}
-	
+
 	.nav {
 		display: inline-block;
 		float: right;
 		height: 45px;
 		padding-top: 7px;
 	}
-	
+
 	.mobile-nav {
 		display: none;
 	}
-	
+
 	.nav ul ul {
 		display: none;
 	}
-	
+
 	.nav ul li:hover > ul {
 		display: block;
 	}
-	
+
 	.nav ul {
 		padding: 0px;
 		list-style: none;
@@ -149,19 +149,19 @@ body strong {
 		text-align: left;
 		index: 999;
 	}
-	
+
 	.nav ul li {
 		float: left;
-		
+
 	}
-	
+
 	.nav ul li a {
 		padding: 5px 20px;
 		display: block;
 		color: #636564;
 		text-decoration: none;
 	}
-	
+
 	/* index */
 	.homepage .nav ul li a {
 		padding: 5px 20px;
@@ -169,107 +169,107 @@ body strong {
 		color: #FFFFFF;
 		text-decoration: none;
 	}
-	
+
 	.nav ul li:hover {
-		
+
 	}
-	
+
 	.nav ul li:hover a {
 		color: #636564;
 		text-decoration: none;
 	}
-	
+
 	/* index */
 	.homepage .nav ul li:hover a {
 		color: #FFFFFF;
 		text-decoration: none;
 	}
-	
+
 	.nav ul li a:hover {
 		color: #EC742A;
 	}
-	
+
 	.homepage .nav ul li a:hover {
 		color: #EC742A;
 	}
-	
+
 	.nav ul li:hover > ul {
 		margin: 0px;
 		padding: 0px;
 	}
-	
+
 	.nav ul li:hover > ul li {
 		float: none;
 		display: block;
 	}
-	
+
 	.nav ul li:hover > ul li a {
 		min-width: 300px;
 		color: #636564;
 		text-decoration: none;
 	}
-	
+
 	/* index */
 	.homepage .nav ul li:hover > ul li a {
 		min-width: 300px;
 		color: #FFFFFF;
 		text-decoration: none;
 	}
-	
+
 	.nav ul li:hover > ul li a:hover {
 		color: #EC742A;
 	}
-	
+
 	.nav ul li {
 		position: relative;
 	}
-	
+
 	.nav ul li ul {
 		position: absolute;
 		top: 26px;
 		left: 0px;
 	}
-	
+
 	.social {
 		margin-top: -7px;
 		width: 45px;
 		height: 45px;
 	}
-	
+
 	.twitter {
 		background-image: url('../images/twitter.png');
 		background-size: cover;
 		margin-right: 10px;
 	}
-	
+
 	.twitter-text {
 		display: none !important;
 	}
-	
+
 	.facebook {
 		background-image: url('../images/fb.png');
 		background-size: cover;
 	}
-	
+
 	.facebook-text {
 		display: none !important;
 	}
-	
+
 	.jumbotron h1 {
 		padding: 60px 0px 30px 0px;
 		text-align: center;
 		color: #EC742A;
 		font-family: "akkurat-light";
 	}
-	
+
 	.mobile-phone {
 		display: none !important;
 	}
-	
+
 	#nav-toggle {
 		display: none !important;
 	}
-	
+
 	#nav-toggle span,
 	#nav-toggle span:before,
 	#nav-toggle span:after {
@@ -281,7 +281,7 @@ body strong {
 	#nav-toggle span:after {
 		display: none !important;
 	}
-	
+
 	#nav-toggle span,
 	#nav-toggle span:before,
 	#nav-toggle span:after {
@@ -290,7 +290,7 @@ body strong {
 }
 
 /* Small Screens */
-	
+
 @media screen and (max-width: 635px) {
 	.logo {
 		background-image: url('../images/logo.png');
@@ -301,7 +301,7 @@ body strong {
 		margin: 0 auto;
 		z-index: 800;
 	}
-	
+
 	.logo-white {
 		background-image: url('../images/Lark-logo.png');
 		background-size: cover;
@@ -310,55 +310,55 @@ body strong {
 		display: block;
 		margin: 0 auto;
 	}
-	
+
 	.nav {
 		display: none !important;
 	}
-	
+
 	.twitter {
 		background-image: none;
 	}
-	
+
 	.twitter-text {
-		
+
 	}
-	
+
 	.facebook {
 		background-image: none;
 	}
-	
+
 	.facebook-text {
-		
+
 	}
-	
+
 	.jumbotron h1 {
 		padding: 30px 0px 0px 0px;
 		text-align: center;
 		color: #EC742A;
 		font-family: "akkurat-light";
 	}
-	
+
 	.appstore {
 		padding: 30px 0px 10px 0px;
 	}
-	
+
 	.iphone-center video {
 		display: none;
 	}
-	
+
 	.mobile-phone {
 		background-image: url('../images/get_fitter.png');
 		background-size: cover;
 		width: 300px;
 		height: 576px;
 	}
-	
+
 	#nav-toggle {
 		cursor: pointer;
 		padding: 30px 60px 30px 20px;
 		z-index: 999;
 	}
-	
+
 	#nav-toggle span,
 	#nav-toggle span:before,
 	#nav-toggle span:after {
@@ -377,7 +377,7 @@ body strong {
 	#nav-toggle span:after {
 		bottom: -10px;
 	}
-	
+
 	#nav-toggle span,
 	#nav-toggle span:before,
 	#nav-toggle span:after {
@@ -416,7 +416,7 @@ body strong {
 }
 
 .description h1 {
-	
+
 }
 
 .description p {
@@ -504,7 +504,7 @@ body strong {
 }
 
 .iphone {
-	
+
 }
 
 .iphone-left {
@@ -542,7 +542,7 @@ body strong {
 }
 
 .features h3 {
-	
+
 }
 
 .features p {
