@@ -48,17 +48,17 @@ function fadeInManager(nextMsgId){
 			emailCaseFlag = true;
 		}
 	}
-/*
+
 
 if (emailCaseFlag == true){
 	loadEmailConvo();
 }
 else if (emailCaseFlag == false){
-	*/
+
 	setTimeout(logoEffectsIn,logoTimeout);
 	setTimeout(textEffectsIn,textTimeout); //offsets
 	setTimeout(btnEffectsIn,btnTimeout);
-//}
+}
 
 };
 
@@ -68,7 +68,7 @@ function loadEmailConvo(){
    setTimeout(loadText1, 3000);
    setTimeout(loadLogo2, 4000);
    setTimeout(loadText2, 6000);
-   setTimeout(loadButtons, 7000); //this should be the function we already have.
+   setTimeout(btnEffectsIn, 7000); //this should be the function we already have.
 
   emailCaseFlag = false; //reset
 }
@@ -169,14 +169,16 @@ function btnEffectsIn(){
   var _jq_currYesBtn = $(".active").children('.convo-btns').children(".yes-btn");
 	var _jq_currNoBtn = $(".active").children('.convo-btns').children(".no-btn");
 	if (_jq_currYesBtn.length > 0){
+    console.log('yes and no animating separately');
 		$(_jq_currYesBtn).css('visibility', 'visible').hide().fadeIn('slow');
 		setTimeout(function(){
 			$(_jq_currNoBtn).css('visibility', 'visible').hide().fadeIn('slow');
 		}, 1000);
 
 	}
-
-	//$(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+	else{
+	  $(".active").children('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+  }
 }
 
 //TODO make fancier
