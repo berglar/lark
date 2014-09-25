@@ -1,3 +1,5 @@
+/* anything with a commented out "note" is what I did to contain the messages within the confines of the page */
+
 body {
 	font-family: 'akkurat-light',Helvetica,Arial,sans-serif;
 	font-size: 16px;
@@ -44,10 +46,9 @@ height: 100%;
 
 	display: table-cell;
 	vertical-align: middle;
-
+	/* note */ width: 100%;
 	margin: 0;
 	padding: 0;
-	border: 0;
 }
 
 
@@ -55,7 +56,7 @@ height: 100%;
   margin-left: auto;
 	margin-right: auto;
 	width: 75%;	/* 57% */
-
+	/* note */ position: relative;
 	/*position: absolute;   for centering disable this*/
 
   /*visibility: hidden; /* display: none */
@@ -66,7 +67,7 @@ height: 100%;
 .prompt-msg{
 	visibility: hidden;
 	position: absolute;
-	width: 75%;
+	/* note */ /* width: 75%; */
 	margin-top: -10%;
 	display: block;
 }
@@ -85,7 +86,8 @@ height: 100%;
 	z-index: 20;
 	width: 64px;
 	height: 64px;
-	margin: auto 0;
+	margin: 0 auto;
+	margin-top: 10px;
 }
 
 .lark-first{
@@ -156,11 +158,11 @@ height: 100%;
 }
 
 .convo-btns{
-  width: 75%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	/* note */ width: 100%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 #prompt-4 {
@@ -229,8 +231,8 @@ height: 100%;
 	position: relative;
 	vertical-align: top;
 	width: 35%;
-	height: 60px;
-	padding: 0;
+	/* note */ /* height: 60px; */
+	/* note */ padding: 20px 0px;
 	font-family: 'akkurat-bold';
 	font-size: 1.5em;
 	color: #FF820B;
@@ -320,9 +322,15 @@ height: 100%;
     .prompt {
         font-size: 2.2em;
     }
+	/* note */ .lark-icon {
+		width: 52px;
+		height: 52px;
+		margin-top: 6px;
+	}
 
     .flat-button, ._input  {
-        font-size: 1em;
+		/* note */ padding: 15px 0px;
+        /* note */ font-size: 1.3em;
     }
     #container-4 {
         width: 75%;
@@ -334,11 +342,13 @@ height: 100%;
 
 @media(max-width: 1200px) {
 	.inner {
-		width: 48%;
+		/* note */ /* width: 48%; */
 	}
 
 	.flat-button {
-		/*height: 50px;*/
+		/* note */ padding: 13px 0px;
+		/* height: 45px; */
+		/* note */ font-size: 1.2em;
 	}
 }
 
@@ -354,9 +364,14 @@ height: 100%;
 	.prompt {
 		font-size: 1.5em;
 	}
-
+	/* note */ .lark-icon {
+		width: 36px;
+		height: 36px;
+		margin-top: 5px;
+	}
 	.flat-button,
 	._input {
+		/* note */ padding: 10px 0px;
 		font-size: 1em;
 	}
 
