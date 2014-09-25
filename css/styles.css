@@ -4,9 +4,17 @@ body {
 	line-height: 1.15;
 }
 
-.main-conversation {
+.main{
+	position: absolute;
+	top: 0%;
+}
+
+#main-convo {
 	width: 100%;
 	height: 100%;
+
+  display: table;
+  position: absolute;
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -14,15 +22,21 @@ body {
   background-image: url('../images/bg-1.jpg');
 }
 
-.main section {
+#convo-content{
+	display: table-cell;
+	vertical-align: middle;
 }
 
-section{
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	width: 57%;
 	visibility: hidden;
 }
 
 .active{
-	visibility: visible;
 }
 
 
@@ -55,11 +69,7 @@ section{
 	vertical-align: middle;
 }
 
-.inner {
-	margin-left: auto;
-	margin-right: auto;
-	width: 57%;
-}
+
 
 .prompt {
 	width: 85%;
@@ -239,7 +249,7 @@ section{
 
 @media(max-width: 1200px) {
 	.inner {
-		width: 90%;
+		width: 48%;
 	}
 
 	.flat-button {

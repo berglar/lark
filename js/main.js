@@ -1,5 +1,51 @@
 $(document).ready(function(){
 
+
+    setTimeout(logoEffectsIn,1000);
+    setTimeout(textEffectsIn,3000); //offsets
+    setTimeout(btnEffectsIn,5000);
+
+
+
+
+
+$(".yes-btn").on("click",effectsOut);
+$(".no-btn").on("click",effectsOut);
+
+
+}); //closes document.ready
+
+
+//bring in 1st div
+function logoEffectsIn(){
+	console.log('within logo effects');
+	 $('.lark-icon').css('visibility','visible').hide().fadeIn('slow');
+//$(".lark-icon").fadeIn(1000);
+
+}
+
+//bring in 2nd div
+function textEffectsIn(){
+		console.log('within text effects');
+
+$('.prompt').css('visibility','visible').hide().fadeIn('slow');
+}
+
+//bring in 3rd div
+function btnEffectsIn(){
+		console.log('within btn effects');
+
+$('.convo-btns').css('visibility','visible').hide().fadeIn('slow');
+}
+
+//TODO make fancier?
+function effectsOut(){
+
+$(".lark-icon").fadeOut(1000);
+$(".prompt").fadeOut(1000);
+$(".convo-btns").fadeOut(1000);
+}
+
 /*
 
 	var detached_2 = $('.page2').detach();
@@ -224,4 +270,3 @@ $(document).ready(function(){
 		callbacks_7.fire();
     });
 */
-}); //closes document.ready
