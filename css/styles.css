@@ -55,7 +55,7 @@ height: 100%;
   margin-left: auto;
 	margin-right: auto;
 	width: 75%;	/* 57% */
-
+  position: absolute;
 	/*position: absolute;   for centering disable this*/
 
   /*visibility: hidden; /* display: none */
@@ -128,7 +128,8 @@ height: 100%;
 
 .email-form-buttons{
 
-  position: relative;
+  /*position: relative;*/
+	/*width: 100%;*/
 }
 
 .convo-btns{
