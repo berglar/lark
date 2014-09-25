@@ -4,17 +4,19 @@ body {
 	line-height: 1.15;
 }
 
-.main{
+p {
+	font-family: 'akkurat-light';
+}
+
+.main {
 	/*position: absolute;*/
-  display: block;
+	display: block;
 	position: relative;
-
-top: 0%;
-left: 0px;
-width: 100%;
-height: 100%;
+	top: 0%;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 	margin: 0;
-
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -22,56 +24,53 @@ height: 100%;
 }
 
 
-.outer-most{
+.outer-most {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.outer{
+.outer {
 	display: table;
 	/*position: absolute;*/
 	height: 100%;
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
-  /*background-color: grey;*/
+	/*background-color: grey;*/
 
 }
 
-
-.middle{
-
+.middle {
 	display: table-cell;
 	vertical-align: middle;
-
+	width: 100%;
 	margin: 0;
 	padding: 0;
-	border: 0;
 }
 
 
-.inner{
-  margin-left: auto;
+.inner {
+	margin-left: auto;
 	margin-right: auto;
 	width: 75%;	/* 57% */
   position: absolute;
 	/*position: absolute;   for centering disable this*/
-
-  /*visibility: hidden; /* display: none */
+	/*visibility: hidden; /* display: none */
 	/*display: none;*/
 
 }
 
-.prompt-msg{
+.prompt-msg {
 	visibility: hidden;
 	position: absolute;
-	width: 75%;
+	/* width: 75%; */
 	margin-top: -10%;
 	display: block;
 }
 
-.active{
+.active {
+
 }
 
 
@@ -85,30 +84,28 @@ height: 100%;
 	z-index: 20;
 	width: 64px;
 	height: 64px;
-	margin: auto 0;
+	margin: 0 auto;
+	margin-top: 10px;
 }
 
-.lark-first{
-  position: relative;
+.lark-first {
+	position: relative;
 }
 
-.lark-second{
-
-		position: relative;
+.lark-second {
+	position: relative;
 }
 
-.prompt-first{
-
-		position: relative;
+.prompt-first {
+	position: relative;
 }
 
-.prompt-second{
-
-		position: relative;
+.prompt-second {
+	position: relative;
 }
 
 
-@keyframes bounce{
+@keyframes bounce {
 	0% {
 		transform:translateY(-100%);
 		opacity: 0;
@@ -126,20 +123,20 @@ height: 100%;
 	}
 }
 
+
 .email-form-buttons{
 
   /*position: relative;*/
 	/*width: 100%;*/
 }
 
-.convo-btns{
+.convo-btns {
 	position: absolute;
 	width: 75%;
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-
 	visibility: hidden;
 }
 
@@ -156,12 +153,12 @@ height: 100%;
 	display: inline-block;
 }
 
-.convo-btns{
-  width: 75%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.convo-btns {
+	width: 100%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 #prompt-4 {
@@ -230,8 +227,8 @@ height: 100%;
 	position: relative;
 	vertical-align: top;
 	width: 35%;
-	height: 60px;
-	padding: 0;
+	/* height: 60px; */
+	padding: 20px 0px;
 	font-family: 'akkurat-bold';
 	font-size: 1.5em;
 	color: #FF820B;
@@ -257,11 +254,15 @@ height: 100%;
 	box-shadow: none;
 }
 
-.flat-button:hover, .flat-button:focus, .flat-button:active {
+.flat-button:hover,
+.flat-button:focus,
+.flat-button:active {
 	transform: scale(1.1);
 }
 
-.flat-button:hover:before, .flat-button:focus:before, .flat-button:active:before {
+.flat-button:hover:before,
+.flat-button:focus:before,
+.flat-button:active:before {
 	opacity: 1;
 	transform: translateY(5px);
 }
@@ -271,12 +272,11 @@ height: 100%;
 	display: inline-block;
 	position: relative;
 	width: 45%;
-	height: 60px;
-	padding: 0;
+	/* height: 60px; */
 	font-family: 'akkurat-bold';
 	font-size: 1.5em;
 	margin: 0px auto;
-	padding: 0px 10px;
+	padding: 14px 10px;
 	border: 1px solid #FFF;
 	border-radius: 5px;
 	line-height: 1.38;
@@ -287,9 +287,9 @@ height: 100%;
 	border: 1px solid #FFFFFF;
 	border-radius: 5px;
 	line-height: 1.38;
-	background-color: transparent;
+	background-color: #FFFFFF;
 	width: 60px;
-	padding: 5px;
+	padding: 14px 10px;
 	margin-left: 2%;
 }
 
@@ -301,6 +301,7 @@ height: 100%;
 	background: rgb(0,0,0);
 	z-index: 99;
 }
+
 /*
 .opacity {
 	opacity: 0.2;
@@ -322,12 +323,27 @@ height: 100%;
         font-size: 2.2em;
     }
 
-    .flat-button, ._input  {
-        font-size: 1em;
+	.lark-icon {
+		width: 52px;
+		height: 52px;
+		margin-top: 6px;
+	}
+
+    .flat-button {
+		padding: 15px 5px;
+		font-size: 1.3em;
     }
+
+	._input,
+	#submit-email {
+		padding: 14px 10px;
+		font-size: 1.3em;
+	}
+
     #container-4 {
         width: 75%;
     }
+
     #container-4 .lark-icon {
         margin-left: 15%;
     }
@@ -335,11 +351,19 @@ height: 100%;
 
 @media(max-width: 1200px) {
 	.inner {
-		width: 48%;
+		/* width: 48%; */
 	}
 
 	.flat-button {
-		/*height: 50px;*/
+		padding: 13px 5px;
+		/* height: 45px; */
+		font-size: 1.2em;
+	}
+
+	._input,
+	#submit-email {
+		padding: 13px 8px;
+		fint-size: 1.2em;
 	}
 }
 
@@ -356,14 +380,27 @@ height: 100%;
 		font-size: 1.5em;
 	}
 
-	.flat-button,
-	._input {
+	.lark-icon {
+		width: 36px;
+		height: 36px;
+		margin-top: 5px;
+	}
+
+	.flat-button {
+		padding: 10px 5px;
+		font-size: 1em;
+	}
+
+	._input,
+	#submit-email {
+		padding: 10px 5px;
 		font-size: 1em;
 	}
 
 	#container-4 .lark-icon {
 		margin-left: 15%;
 	}
+
 	#container-4 .prompt {
 		width: 40%;
 		margin-left: 1%;
