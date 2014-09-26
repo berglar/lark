@@ -32,11 +32,12 @@ p {
 
 .outer {
 	display: table;
-	/*position: absolute;*/
+	position: absolute;
 	height: 100%;
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
+        z-index: 10
 }
 
 .middle {
@@ -368,7 +369,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	z-index: 1000;
+	z-index: 8;
 	top: 30%;
 	background-image: url('../images/clouds.png');
 	background-repeat: repeat-x;
@@ -383,7 +384,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	z-index: 30;
+	z-index: 5;
 	top: 20%;
 	background-image: url('../images/clouds.png');
 	background-repeat: repeat-x;
@@ -457,7 +458,7 @@ p {
 	height: 10000px;
 	width: 100%;
 	position: absolute;
-	z-index: 900;
+	z-index: 7;
     background: -webkit-radial-gradient(circle,yellow,blue); /* Safari 5.1 to 6.0 */
     background: -o-radial-gradient(circle,yellow,blue); /* For Opera 11.6 to 12.0 */
     background: -moz-radial-gradient(circle,yellow,blue); /* For Firefox 3.6 to 15 */
