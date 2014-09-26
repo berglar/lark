@@ -80,7 +80,7 @@ p {
 	width: 64px;
 	height: 64px;
 	/*margin: 0 auto;*/
-	margin-left: 10px;
+	margin-left: 0px;
 	margin-top: 10px;
 }
 
@@ -112,14 +112,17 @@ p {
 		transform:translateY(-100%);
 		opacity: 0;
 	}
+	
 	5% {
 		transform:translateY(-100%);
 		opacity: 0;
 	}
+	
 	15% {
 		transform:translateY(0);
 		padding-bottom: 5px;
 	}
+	
 	30% {
 		transform:translateY(-50%);
 	}
@@ -148,71 +151,13 @@ p {
 	display: none;
 }
 
-
 .prompt {
-	width: 85%;
-	margin-left: 5%;
+	width: 90%;
+	padding-left: 5%;
 	color: #FFF;
 	font-size: 2.7em;
 	display: inline-block;
 }
-
-#prompt-4 {
-	width: auto;
-}
-
-.prompt-a,
-.lark-icon-a {
-	margin-bottom: 5%;
-}
-
-
-/*
-#container-2 {
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -10%;
-}
-
-#container-2a {
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -10%;
-}
-
-#container-2b {
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -10%;
-}
-
-#container-3 {
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -10%;
-}
-
-#container-4 {
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -8%;
-	text-align: center;
-}
-
-
-#container-button-2a {
-	position: relative;
-}
-
-#container-button-2b {
-	position: relative;
-}
-*/
 
 .first-button {
 	margin-right: 15%;
@@ -315,35 +260,37 @@ p {
 	z-index: 700;
 }
 
-@media(max-width: 1400px) {
-    .prompt {
-        font-size: 2.2em;
-    }
+@media(min-width: 1795px) {
+	.prompt-msg {
+		margin-top: -10%;
+	}
+	
+	.prompt {
+		width: 95%;
+	}
+}
 
+@media(max-width: 1400px) {
+	.prompt {
+		font-size: 2.2em;
+	}
+	
 	.lark-icon {
 		width: 52px;
 		height: 52px;
 		margin-top: 6px;
 	}
-
-    .flat-button {
+	
+	.flat-button {
 		padding: 15px 5px;
 		font-size: 1.3em;
-    }
-
+	}
+	
 	._input,
 	#submit-email {
 		padding: 14px 10px;
 		font-size: 1.3em;
 	}
-
-    #container-4 {
-        width: 75%;
-    }
-
-    #container-4 .lark-icon {
-        margin-left: 15%;
-    }
 }
 
 @media(max-width: 1200px) {
@@ -362,61 +309,38 @@ p {
 		padding: 13px 8px;
 		fint-size: 1.2em;
 	}
+	
+	.prompt-msg {
+		margin-top: -15%;
+	}
 }
 
 @media(max-width: 1000px) {
-	/*#welcome-msg,
-	#container-2a,
-	#container-2b,
-	#container-3,
-	#container-4 {
-		width: 95%;
-		}*/
-
 	.prompt {
 		font-size: 1.5em;
 	}
-
+	
 	.lark-icon {
 		width: 36px;
 		height: 36px;
 		margin-top: 5px;
 	}
-
+	
 	.flat-button {
 		padding: 10px 5px;
 		font-size: 1em;
 	}
-
+	
 	._input,
 	#submit-email {
 		padding: 10px 5px;
 		font-size: 1em;
 	}
-
-	#container-4 .lark-icon {
-		margin-left: 15%;
-	}
-
-	#container-4 .prompt {
-		width: 40%;
-		margin-left: 1%;
-	}
 }
 
 @media(max-width: 790px) {
 	.email-btn {
-		margin-top: 15% !important;
-	}
-	
-	.prompt-msg {
-		margin-top: -20%;
-	}
-}
-
-@media(max-width: 710px) {
-	.email-btn {
-		margin-top: 25% !important;
+		margin-top: 10% !important;
 	}
 	
 	.prompt-msg {
@@ -425,8 +349,8 @@ p {
 }
 
 @media(max-width: 660px) {
-	.email-btn {
-		margin-top: 20% !important;
+	.prompt {
+		width: 86%;
 	}
 	
 	.prompt-msg {
