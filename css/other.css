@@ -727,11 +727,11 @@ body strong {
 /* Index */
 
 .appstore-li {
-	margin: 0px;
+	margin: 0px 0px 80px 0px;
 }
 
 .samsung-li {
-	margin: 0px;
+	margin: 0px 0px 80px 0px;
 }
 
 .homepage {
@@ -742,9 +742,9 @@ body strong {
 
 .prompt a {
 	display: inline-block;
-	margin-left: 30%;
 	overflow: hidden;
 	background: url('https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png') no-repeat;
 	width: 135px;
 	height: 40px;
+	margin-left: 30%;
 }
